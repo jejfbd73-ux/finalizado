@@ -1,0 +1,259 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ONG Animales Ramallo | Adopción y rescate</title><meta name="description" content="Conocé perros que esperan una familia y ayudá a los rescates de ONG Animales Ramallo."><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><style>
+.adopt-dialog{width:min(900px,94vw);max-height:92vh;padding:0;border:0;border-radius:24px;background:#fff;color:#171717;box-shadow:0 30px 90px rgba(0,0,0,.28)}
+.adopt-dialog::backdrop{background:rgba(0,0,0,.65)}
+.adopt-wrap{padding:34px 28px 38px;overflow:auto;max-height:92vh}
+.adopt-intro{line-height:1.65;color:#555;margin:12px 0 24px}
+.adopt-section-title{font-weight:900;letter-spacing:.05em;margin:28px 0 18px;font-size:1.05rem}
+.adopt-question{font-weight:700;line-height:1.55;margin:24px 0 9px}
+#adoptForm label{display:block;font-weight:700;margin:16px 0;color:#222;line-height:1.5}
+#adoptForm input:not([type=file]):not([type=hidden]),#adoptForm textarea,#adoptForm select{display:block;width:100%;box-sizing:border-box;margin-top:7px;border:1px solid #d8d8d8;border-radius:12px;padding:12px 13px;font:inherit;background:#fff}
+#adoptForm textarea{min-height:100px;resize:vertical}
+#adoptForm input[type=file]{display:block;width:100%;margin-top:9px;padding:10px;border:1px dashed #bbb;border-radius:12px;background:#fafafa}
+#adoptForm input:invalid:not(:focus),#adoptForm textarea:invalid:not(:focus),#adoptForm select:invalid:not(:focus){border-color:#ddd}
+.hint{font-size:.9rem;font-weight:500;color:#666}
+.adopt-notes{background:#f6f6f4;border-radius:16px;padding:18px;line-height:1.6;color:#444}
+.adopt-submit{margin-top:26px;width:100%}
+.hp{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;opacity:0!important}
+@media(max-width:600px){.adopt-wrap{padding:26px 17px 30px}.adopt-dialog{width:96vw;border-radius:18px}}
+.choice-status-icon{width:22px!important;height:22px!important;object-fit:contain!important;display:inline-block!important;flex:0 0 22px!important;border-radius:0!important;background:transparent!important;margin-right:7px;vertical-align:middle}.choice span{display:flex;align-items:center;justify-content:center;gap:2px}.choice-status-icon+*{vertical-align:middle}
+.turnstile-wrap{margin:22px 0 8px;padding:14px;border:1px solid #e7e1da;border-radius:14px;background:#faf8f5}.turnstile-note{display:block;margin-top:7px;color:#777;font-size:.82rem}.turnstile-wrap .cf-turnstile{min-height:65px}
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap');
+.adopt-dialog{width:min(900px,95vw);max-height:94vh;padding:0;border:0;border-radius:28px;background:#fffdf9;color:#573623;box-shadow:0 30px 90px rgba(52,31,20,.28);overflow:hidden}.adopt-dialog::backdrop{background:rgba(38,24,17,.62);backdrop-filter:blur(4px)}
+.adopt-wrap{padding:30px 30px 24px;max-height:94vh;overflow:auto;scroll-padding-top:24px;scroll-padding-bottom:150px;font-family:'Manrope',system-ui,sans-serif}.adopt-top h2{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(31px,5vw,46px);line-height:1;margin:7px 0 9px;letter-spacing:-.5px}.adopt-intro{margin:0;color:#806d5f;line-height:1.6}.selected-animal{display:flex;align-items:center;gap:14px;background:#fff5e8;border:1px solid #eadbc8;border-radius:20px;padding:12px 14px;margin:20px 0}.selected-animal img{width:64px;height:64px;border-radius:16px;object-fit:cover;background:#eadbc8}.selected-animal div{display:grid;gap:3px}.selected-animal span{font-size:10px;letter-spacing:1.4px;font-weight:800;color:#a15a3a}.selected-animal strong{font-family:'DM Serif Display',Georgia,serif;font-size:23px;line-height:1.05}.selected-animal small{color:#806d5f}.adopt-progress{margin:18px 0 24px}.progress-line{height:7px;background:#eee1d4;border-radius:999px;overflow:hidden}.progress-line span{display:block;height:100%;width:16.67%;background:#cb5128;border-radius:999px;transition:width .45s cubic-bezier(.22,1,.36,1)}.progress-copy{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:#806d5f}.progress-copy b{color:#573623}.adopt-step{display:none;animation:adoptIn .35s ease}.adopt-step.active{display:block}@keyframes adoptIn{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:none}}.step-heading{display:flex;align-items:center;gap:13px;margin-bottom:8px}.step-icon{width:54px;height:54px;display:grid;place-items:center;border-radius:17px;background:#f8ecdf;border:1px solid #eadbc8;flex:0 0 54px}.step-icon img{width:34px;height:34px;object-fit:contain}.step-heading small{font-size:10px;font-weight:800;letter-spacing:1.6px;color:#cb5128}.step-heading h3{font-family:'DM Serif Display',Georgia,serif;font-size:29px;line-height:1.05;margin:2px 0 0}.step-description{color:#806d5f;line-height:1.6;margin:0 0 22px}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.adopt-field{display:grid!important;gap:7px!important;font-size:13px!important;font-weight:800!important;color:#573623!important;margin:0 0 16px!important}.adopt-field.full{grid-column:1/-1}.adopt-field input,.adopt-field textarea,.adopt-field select{margin:0!important;width:100%;border:1px solid #e2d4c5;border-radius:14px;padding:13px 14px;background:#fff;color:#573623;outline:0;font:500 15px 'Manrope',sans-serif;transition:.2s}.adopt-field textarea{min-height:108px;resize:vertical;line-height:1.5}.adopt-field input:focus,.adopt-field textarea:focus,.adopt-field select:focus{border-color:#cb5128;box-shadow:0 0 0 4px rgba(203,81,40,.10)}.question-card,.commitment-card{background:#fff;border:1px solid #eadbc8;border-radius:18px;padding:16px;margin:0 0 17px}.question-card>p{font-size:14px;font-weight:800;line-height:1.45;margin:0 0 12px}.choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.choice-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}.choice{position:relative!important;display:block!important;margin:0!important;font-weight:600!important}.choice input{position:absolute;opacity:0;pointer-events:none}.choice span{min-height:54px;display:flex;align-items:center;justify-content:center;gap:7px;text-align:center;padding:10px;border:1px solid #e4d7ca;border-radius:13px;background:#fffaf5;color:#573623;cursor:pointer;transition:.2s;font-size:13px;line-height:1.3}.choice span img{width:27px;height:27px;object-fit:contain}.choice input:checked+span{border-color:#cb5128;background:#fff0e7;box-shadow:0 0 0 2px rgba(203,81,40,.08);transform:translateY(-1px)}.choice input:focus-visible+span{outline:2px solid #cb5128;outline-offset:2px}.conditional-box{background:#faf2e9;border-radius:16px;padding:14px;margin:-4px 0 17px}.upload-box{display:grid;gap:7px;padding:15px;border:1px dashed #d8c5b4;border-radius:15px;background:#fffaf5;color:#573623;font-weight:800;font-size:13px;margin-bottom:17px}.upload-box input{font:500 13px 'Manrope',sans-serif}.upload-box small{color:#806d5f;font-weight:500}.age-note,.final-note{background:#f8eee5;border-radius:15px;padding:12px 14px;color:#806d5f;font-size:12px;line-height:1.5;margin-top:3px}.commitment-card strong{font-family:'DM Serif Display',Georgia,serif;font-size:19px;line-height:1.2;display:block}.commitment-card p{color:#806d5f;font-size:13px;line-height:1.55;margin:7px 0 13px}.final-note{margin:18px 0 0}.final-note strong{font-family:'DM Serif Display',Georgia,serif;font-size:20px;color:#573623}.final-note p{margin:5px 0 0}.adopt-actions{display:flex;justify-content:space-between;gap:10px;margin-top:24px;padding-top:17px;border-top:1px solid #eadbc8}.adopt-actions .btn{font-family:'Manrope',sans-serif}.adopt-actions .primary{background:#f7a921;color:#573623}.adopt-actions .primary:hover{background:#cb5128;color:#fff}.adopt-actions .secondary{border-color:#cb5128;color:#cb5128;background:transparent}.adopt-actions .btn:disabled{opacity:.45;cursor:not-allowed;transform:none}.form-msg{margin-top:10px;font-size:13px;font-weight:800}
+.adopt-success{position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:34px 26px;background:linear-gradient(180deg,#fffaf5 0%,#f8ecdf 100%);border-radius:24px;animation:adoptSuccessIn .45s ease}.adopt-success[hidden]{display:none}.adopt-success-icon{width:82px;height:82px;border-radius:50%;display:grid;place-items:center;background:#fff0e7;border:1px solid #eadbc8;font-size:40px;margin-bottom:18px;box-shadow:0 10px 30px rgba(87,54,35,.08)}.adopt-success .eyebrow{font-size:10px;letter-spacing:1.8px;font-weight:800;color:#cb5128}.adopt-success h3{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(34px,6vw,52px);line-height:1.02;color:#573623;margin:10px 0 14px}.adopt-success p{max-width:560px;color:#806d5f;font-size:16px;line-height:1.65;margin:0 0 26px}.adopt-success p strong{color:#573623}.adopt-success-return{font-size:12px;font-weight:800;letter-spacing:.8px;color:#a06f54;text-transform:uppercase}@keyframes adoptSuccessIn{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+.hp{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;opacity:0!important}.hidden{display:none!important}.close{z-index:5}
+@media(max-width:650px){.adopt-dialog{width:97vw;border-radius:21px;max-height:calc(100dvh - 12px)}.adopt-wrap{padding:24px 16px calc(120px + env(safe-area-inset-bottom));max-height:calc(100dvh - 12px);scroll-padding-top:28px;scroll-padding-bottom:180px}.field-grid{grid-template-columns:1fr}.adopt-field.full{grid-column:auto}.choice-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}.step-heading h3{font-size:26px}.selected-animal img{width:56px;height:56px}.adopt-actions{position:sticky;bottom:0;background:rgba(255,253,249,.96);backdrop-filter:blur(8px);z-index:4;margin-left:-3px;margin-right:-3px;padding:12px 3px}.adopt-actions .btn{flex:1}.adopt-actions .secondary{max-width:110px}}
+@media(prefers-reduced-motion:reduce){.adopt-step{animation:none}.progress-line span,.choice span{transition:none}}
+</style>
+</head><body><header class="nav"><a href="#inicio" class="brand"><img src="assets/images/logo.png" alt="Logo ONG Animales Ramallo"><span class="brand-name">ONG Animales Ramallo <img class="verified-badge" src="assets/images/insignia-verificada.png" alt="Verificado"></span></a><nav class="desktop-nav"><a href="#adopciones">Adoptar</a><a href="#como">Cómo funciona</a><a href="#donar">Donar</a><a href="panel.html" class="admin-link">Panel</a></nav><button id="menuBtn" class="menu" type="button" aria-label="Abrir menú" aria-expanded="false"><img src="assets/images/menu/menu-desplegable.png" alt=""></button><div id="menuOverlay" class="menu-overlay" aria-hidden="true"></div>
+<nav id="mobileMenu" class="mobile-menu" aria-label="Menú móvil" aria-hidden="true">
+  <div class="mobile-menu-head">
+    <a href="#inicio" class="mobile-menu-brand" aria-label="Ir al inicio">
+      <img src="assets/images/logo.png" alt="Logo ONG Animales Ramallo">
+      <span><strong>ONG Animales Ramallo</strong><small>Pequeñas acciones, grandes cambios ♡</small></span>
+    </a>
+    <button id="menuClose" class="menu-close" type="button" aria-label="Cerrar menú">×</button>
+  </div>
+  <div class="mobile-menu-intro">
+    <h2>¿Qué querés hacer?</h2>
+    <p>Cada acción ayuda a cambiar una vida.</p>
+  </div>
+  <div class="menu-actions">
+    <a href="#adopciones" class="menu-card menu-adopt">
+      <span class="menu-icon"><img src="assets/images/menu/adoptar.png" alt=""></span>
+      <span class="menu-card-copy"><b>Adoptar</b><small>Encontrá a tu nuevo compañero</small></span>
+      <span class="menu-arrow">→</span>
+    </a>
+    <a href="#como" class="menu-card menu-how">
+      <span class="menu-icon"><img src="assets/images/menu/como-funciona.png" alt=""></span>
+      <span class="menu-card-copy"><b>Cómo funciona</b><small>Conocé el proceso de adopción</small></span>
+      <span class="menu-arrow">→</span>
+    </a>
+    <a href="#donar" class="menu-card menu-donate">
+      <span class="menu-icon"><img src="assets/images/menu/donar.png" alt=""></span>
+      <span class="menu-card-copy"><b>Donar</b><small>Tu ayuda se transforma en rescates</small></span>
+      <span class="menu-arrow">→</span>
+    </a>
+  </div>
+  <div class="menu-divider"><span>🐾</span></div>
+  <a href="panel.html" class="menu-card menu-admin">
+    <span class="menu-icon"><img src="assets/images/menu/panel.png" alt=""></span>
+    <span class="menu-card-copy"><b>Panel administrativo</b><small>Gestionar el contenido de la ONG</small></span>
+    <span class="menu-arrow">→</span>
+  </a>
+  <div class="mobile-menu-footer"><span>Gracias por ser parte ♡</span><b>Más huellas, más historias</b></div>
+</nav></header><main id="inicio"><section class="hero"><div class="hero-paws" aria-hidden="true"><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span></div><div class="hero-copy"><span class="eyebrow">RESCATE · CUIDADO · SEGUNDAS OPORTUNIDADES</span><h1>Una familia puede cambiarlo todo.<br><em>Vos también.</em></h1><p>Hay un peludito esperando una familia responsable. Conocé sus historias y ayudanos a seguir rescatando.</p><div class="actions"><a class="btn primary" href="#adopciones">QUIERO ADOPTAR →</a><a class="btn secondary" href="#donar">QUIERO DONAR ♡</a></div><div class="hero-stat">🐾 <b id="dogCount">21</b> perros esperan una oportunidad</div></div><div class="hero-card" id="heroCard"><div class="hero-image-wrap"><img id="heroDog" src="assets/images/coca.jpg" alt="Coca, perro en adopción"></div><div class="hero-caption"><span>❤️ También está esperando</span><b id="heroDogName">COCA</b><small id="heroDogMeta">5 años · mediana · hembra</small></div></div></section><section id="adopciones" class="section"><div class="section-head"><div><span class="eyebrow">EN ADOPCIÓN</span><h2>Ellos te están esperando</h2></div><p>Deslizá, conocelos y elegí a quién querés darle una nueva oportunidad.</p></div><div id="dogs" class="dog-grid"></div></section><section id="como" class="how section how-v3"><div class="section-head"><div><span class="eyebrow">ADOPTAR ES UN COMPROMISO</span><h2>¿Cómo funciona?</h2></div><p>Un recorrido simple para que cada adopción sea responsable, acompañada y para toda la vida.</p></div><div class="adoption-steps">
+<article class="adoption-step step-yellow"><div class="step-copy"><span class="step-no">01</span><span class="step-kicker">PRIMER PASO</span><h3>Conocé</h3><p>Elegí un perro y conocé su historia, personalidad y necesidades.</p></div><div class="step-art"><img src="assets/images/how/Conoce.png" alt="Perro en adopción"></div></article>
+<article class="adoption-step step-orange"><div class="step-copy"><span class="step-no">02</span><span class="step-kicker">SEGUNDO PASO</span><h3>Postulate</h3><p>Completá el formulario de adopción con información sobre vos y tu hogar.</p></div><div class="step-art"><img src="assets/images/how/Postulate.png" alt="Persona completando el formulario de adopción"></div></article>
+<article class="adoption-step step-brown"><div class="step-copy"><span class="step-no">03</span><span class="step-kicker">TERCER PASO</span><h3>Evaluamos</h3><p>El equipo revisa la solicitud y se comunica con vos para avanzar.</p></div><div class="step-art"><img src="assets/images/how/Evaluamos.png" alt="Revisión de una solicitud de adopción"></div></article>
+<article class="adoption-step step-terracotta"><div class="step-copy"><span class="step-no">04</span><span class="step-kicker">ÚLTIMO PASO</span><h3>Adoptás</h3><p>Si todo está listo, empieza una nueva historia juntos.</p></div><div class="step-art"><img src="assets/images/how/Adoptas.png" alt="Perro adoptado junto a su nueva familia"></div></article>
+</div><div class="how-closing"><span></span><strong>Ellos también merecen un futuro ♡</strong></div></section><section id="donar" class="donation section"><div class="section-head"><div><span class="eyebrow">AYUDÁ A SEGUIR RESCATANDO</span><h2>Una donación también puede salvar una vida.</h2></div><p>Veterinaria, alimento, medicamentos y rescates necesitan de personas que quieran dar una mano.</p></div><div id="campaigns" class="campaigns"></div><div class="donation-box">
+  <div class="donation-visual">
+    <div class="donation-image-card">
+      <div class="donation-image-glow"></div>
+      <img
+        src="assets/images/donaciones.png"
+        alt="Ayudá a la ONG Animales Ramallo"
+        class="donation-main-image"
+      >
+      <div class="donation-image-caption">
+        <span>🐾</span>
+        <div>
+          <strong>Tu ayuda transforma vidas</strong>
+          <small>Cada aporte suma a un rescate.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="donation-content">
+    <div class="donation-heading">
+      <div class="donation-heading-copy">
+        <span class="donation-kicker">AYUDÁ A SEGUIR RESCATANDO</span>
+        <h3>Elegí cuánto querés donar</h3>
+        <p>
+          Podés hacer un aporte único o ayudarnos todos los meses.
+          Tu donación se transforma en alimento, medicamentos y atención veterinaria.
+        </p>
+      </div>
+
+      <img
+        src="assets/images/mercadopago.png"
+        alt="Doná de forma rápida, segura y 100% online con Mercado Pago"
+        class="mercadopago-logo"
+      >
+    </div>
+
+    <div class="donation-divider"></div>
+
+    <div class="donation-amount-label">
+      <span>Elegí un monto</span>
+      <small>Seleccioná la opción que quieras aportar</small>
+    </div>
+
+    <div id="mpButtons" class="amounts"></div>
+
+    <div class="donation-bottom">
+      <button
+        type="button"
+        class="alias-copy-card"
+        id="copyAliasButton"
+        aria-label="Copiar alias ongramallo"
+      >
+        <span class="alias-icon"><img src="assets/images/salario.png" alt="Donación"></span>
+        <span class="alias-info">
+          <small>También podés donar directamente</small>
+          <strong>Alias: <b>ongramallo</b></strong>
+          <small class="alias-holder">Titular: <b>Celina Elizabeth Forlino</b></small>
+        </span>
+        <span id="copyAliasText" class="copy-label">TOCÁ PARA COPIAR</span>
+      </button>
+
+      <div class="secure-payment">
+        <img
+          src="assets/images/pagoseguro.png"
+          alt="Donación segura. Procesada mediante Mercado Pago. Pago seguro."
+          class="secure-payment-image"
+        >
+      </div>
+    </div>
+  </div>
+</div></section><section class="instagram section"><span class="eyebrow">SEGUINOS</span><h2>Más historias, rescates y adopciones</h2><p>Todo lo que pasa día a día también lo compartimos en Instagram.</p><a class="btn primary instagram-btn" href="https://www.instagram.com/onganimalesramallo" target="_blank" rel="noopener"><img src="assets/images/menu/instagram.png" alt="" aria-hidden="true"> <span>VISITANOS!</span><span aria-hidden="true">↗</span></a></section></main><footer><div><b>ONG Animales Ramallo</b><span>Rescatando, cuidando y buscando familias responsables.</span></div><span>Hecho con ❤️ por quienes creen en las segundas oportunidades.</span></footer><dialog id="dogModal"><button class="close" data-close>×</button><div id="dogModalContent"></div></dialog><dialog id="adoptModal" class="adopt-dialog">
+<button class="close" data-close aria-label="Cerrar">×</button>
+<div class="adopt-wrap">
+  <div class="adopt-top">
+    <span class="eyebrow">QUIERO ADOPTAR</span>
+    <h2 id="adoptTitle">FORMULARIO DE ADOPCIÓN</h2>
+    <p class="adopt-intro">Tomate unos minutos. Queremos conocerte y conocer el hogar que le vas a ofrecer.</p>
+  </div>
+
+  <div class="selected-animal" id="selectedAnimalCard">
+    <img id="selectedAnimalImg" src="assets/images/dog.png" alt="Animal seleccionado">
+    <div><span>VAS A POSTULARTE POR</span><strong id="selectedAnimalName">TU NUEVO COMPAÑERO</strong><small id="selectedAnimalMeta">Completá el formulario para continuar</small></div>
+  </div>
+
+  <div class="adopt-progress" aria-live="polite">
+    <div class="progress-line"><span id="adoptProgressBar"></span></div>
+    <div class="progress-copy"><b id="adoptStepLabel">Paso 1 de 6</b><span id="adoptProgressPct">17%</span></div>
+  </div>
+
+  <form id="adoptForm" action="" method="POST" enctype="multipart/form-data" novalidate>
+    <input type="hidden" name="Identificador interno" id="animalId">
+    <input type="hidden" name="Animal que quiere adoptar" id="animalInterest">
+
+    <section class="adopt-step active" data-adopt-step="1">
+      <div class="step-heading"><span class="step-icon"><img src="assets/icons-formulario/datos.png" alt=""></span><div><small>PASO 1</small><h3>Queremos conocerte</h3></div></div>
+      <p class="step-description">Estos datos nos ayudan a saber quién está detrás de la solicitud.</p>
+      <div class="field-grid">
+        <label class="adopt-field">Nombre completo *<input required name="Nombre completo" id="name" type="text" autocomplete="name" placeholder="Tu nombre y apellido"></label>
+        <label class="adopt-field">Edad *<input required name="Edad" id="age" type="number" min="22" placeholder="Ej. 32"></label>
+        <label class="adopt-field full">Dirección exacta *<input required name="Dirección exacta" type="text" autocomplete="street-address" placeholder="Calle, número y localidad"></label>
+        <label class="adopt-field">Profesión / ocupación *<input required name="Profesión u ocupación" type="text" placeholder="¿A qué te dedicás?"></label>
+        <label class="adopt-field">Número de contacto *<input required name="Teléfono de contacto" type="tel" autocomplete="tel" placeholder="WhatsApp / teléfono"></label>
+      </div>
+      <div class="age-note">Para adoptar, la persona que completa el formulario debe ser mayor de 21 años.</div>
+    </section>
+
+    <section class="adopt-step" data-adopt-step="2">
+      <div class="step-heading"><span class="step-icon"><img src="assets/icons-formulario/adopcion.png" alt=""></span><div><small>PASO 2</small><h3>Sobre la adopción</h3></div></div>
+      <p class="step-description">Ya sabemos qué animal elegiste. Ahora queremos entender qué lugar ocuparía en tu vida.</p>
+      <div class="question-card">
+        <p>¿La adopción es para vos o para un tercero? *</p>
+        <div class="choice-grid two"><label class="choice"><input required type="radio" name="¿La adopción es para quién?" value="Es para mí"><span>Es para mí</span></label><label class="choice"><input type="radio" name="¿La adopción es para quién?" value="Es para un tercero, ya le aviso"><span>Es para un tercero</span></label></div>
+      </div>
+      <label class="adopt-field">¿Qué función desempeñaría en tu hogar? *<textarea required name="Función del animal en el hogar" placeholder="Compañía, guardia, acompañamiento, etc."></textarea></label>
+      <label class="adopt-field">¿Qué características buscás en el animal o hay algo que debamos tener en cuenta? *<textarea required name="Qué buscás en el animal" placeholder="Contanos qué esperás de la adopción."></textarea></label>
+      <div class="question-card"><p>Si el animal elegido fuera adoptado, ¿estarías dispuesto/a a adoptar otro? *</p><div class="choice-grid two"><label class="choice"><input required type="radio" name="Si este animal es adoptado, ¿aceptarías otro?" value="Sí, estoy dispuesto"><span><img class="choice-status-icon" src="assets/icons-formulario/check.png" alt="">Sí, podría conocer a otro</span></label><label class="choice"><input type="radio" name="Si este animal es adoptado, ¿aceptarías otro?" value="No estoy dispuesto"><span><img class="choice-status-icon" src="assets/icons-formulario/x.png" alt="">Prefiero esperar</span></label></div></div>
+    </section>
+
+    <section class="adopt-step" data-adopt-step="3">
+      <div class="step-heading"><span class="step-icon"><img src="assets/icons-formulario/hogar.png" alt=""></span><div><small>PASO 3</small><h3>Tu hogar</h3></div></div>
+      <p class="step-description">Queremos saber si el espacio es seguro y adecuado para el animal.</p>
+      <div class="question-card"><p>¿La vivienda es propia o alquilada? *</p><div class="choice-grid"><label class="choice"><input required type="radio" name="Tipo de vivienda" value="Propia"><span><img src="assets/icons-formulario/casa.png" alt="">Propia</span></label><label class="choice"><input type="radio" name="Tipo de vivienda" value="Alquilada"><span><img src="assets/icons-formulario/llave.png" alt="">Alquilada</span></label></div></div>
+      <div id="rentBox" class="conditional-box hidden"><label class="adopt-field">Si alquilás, ¿el propietario te permite tener una mascota? *<select name="Permiso del propietario para tener mascota"><option value="">Seleccioná</option><option>Sí</option><option>No</option><option>Lo tengo que consultar</option></select></label></div>
+      <div class="question-card"><p>¿Qué espacio exterior tiene la vivienda? *</p><div class="choice-grid four"><label class="choice"><input required type="radio" name="Espacio exterior" value="Patio"><span><img src="assets/icons-formulario/patio.png" alt="">Patio</span></label><label class="choice"><input type="radio" name="Espacio exterior" value="Terraza"><span><img src="assets/icons-formulario/terraza.png" alt="">Terraza</span></label><label class="choice"><input type="radio" name="Espacio exterior" value="Balcón"><span><img src="assets/icons-formulario/balcon.png" alt="">Balcón</span></label><label class="choice"><input type="radio" name="Espacio exterior" value="No tiene"><span>Sin exterior</span></label></div></div>
+      <label class="adopt-field">Contanos cómo es ese espacio y si está protegido. *<textarea required name="Cómo es y cómo está protegido el espacio exterior" placeholder="Patio cerrado, balcón con red, terraza segura..." ></textarea></label>
+      <label class="upload-box">📷 Foto del patio / casa *<input required name="Foto del patio o casa" type="file" accept="image/*"><small>Una foto clara nos ayuda a evaluar el espacio.</small></label>
+    </section>
+
+    <section class="adopt-step" data-adopt-step="4">
+      <div class="step-heading"><span class="step-icon"><img src="assets/icons-formulario/perro.png" alt=""></span><div><small>PASO 4</small><h3>Convivencia y mascotas</h3></div></div>
+      <p class="step-description">Esta parte nos ayuda a pensar cómo sería la adaptación.</p>
+      <label class="adopt-field">¿Cuántas horas por día quedaría solo el animal? *<select required name="Horas que quedaría solo"><option value="">Seleccioná</option><option>Menos de 2 horas</option><option>2 a 4 horas</option><option>4 a 8 horas</option><option>Más de 8 horas</option></select></label>
+      <label class="adopt-field">¿Al cuidado de quién quedaría cuando te vayas de vacaciones? *<textarea required name="Quién lo cuidaría durante vacaciones" placeholder="Contanos quién podría cuidarlo."></textarea></label>
+      <label class="adopt-field">¿Dónde estaría durante el día y dónde dormiría? *<textarea required name="Dónde estaría de día y dónde dormiría"></textarea></label>
+      <label class="adopt-field">¿Cuántas personas viven en tu casa y qué edades tienen? *<textarea required name="Personas que viven en el domicilio" placeholder="Ej. Somos 3: 35, 33 y 8 años."></textarea></label>
+      <div class="question-card"><p>¿Tenés otras mascotas? *</p><div class="choice-grid two"><label class="choice"><input required type="radio" name="¿Tenés otras mascotas?" value="Sí"><span><img src="assets/icons-formulario/perro.png" alt="">Sí</span></label><label class="choice"><input type="radio" name="¿Tenés otras mascotas?" value="No"><span><img class="choice-status-icon" src="assets/icons-formulario/x.png" alt="">No</span></label></div></div>
+      <div id="petsBox" class="conditional-box hidden"><label class="adopt-field">Contanos especie, edad, vacunas y si están esterilizados. *<textarea name="Información sobre otras mascotas"></textarea></label><label class="adopt-field">¿Quién es tu veterinario de confianza?<input name="Veterinario de confianza" type="text"></label><label class="upload-box">📷 Fotos de tus mascotas <input name="Fotos de otras mascotas" type="file" accept="image/*" multiple><small>Podés seleccionar más de una.</small></label></div>
+      <div class="question-card"><p>¿Están todos de acuerdo en adoptar una mascota? *</p><div class="choice-grid two"><label class="choice"><input required type="radio" name="¿Todos están de acuerdo con la adopción?" value="Sí"><span><img class="choice-status-icon" src="assets/icons-formulario/check.png" alt="">Sí, todos de acuerdo</span></label><label class="choice"><input type="radio" name="¿Todos están de acuerdo con la adopción?" value="No"><span><img class="choice-status-icon" src="assets/icons-formulario/x.png" alt="">No</span></label></div></div>
+    </section>
+
+    <section class="adopt-step" data-adopt-step="5">
+      <div class="step-heading"><span class="step-icon"><img src="assets/icons-formulario/corazon.png" alt=""></span><div><small>PASO 5</small><h3>Responsabilidad y cuidados</h3></div></div>
+      <p class="step-description">Adoptar implica tiempo, recursos y paciencia. Queremos asegurarnos de que lo tengas presente.</p>
+      <label class="adopt-field">¿Tenés recursos económicos para mantenerlo y afrontar una eventualidad veterinaria? *<textarea required name="Recursos económicos para mantenerlo y atenderlo" placeholder="Contanos brevemente."></textarea></label>
+      <div class="question-card"><p>Si fuera cachorro, ¿estás de acuerdo con castrarlo a los 6 meses? *</p><div class="choice-grid two"><label class="choice"><input required type="radio" name="Compromiso de castración" value="Sí, estoy de acuerdo"><span><img class="choice-status-icon" src="assets/icons-formulario/check.png" alt="">Sí, estoy de acuerdo</span></label><label class="choice"><input type="radio" name="Compromiso de castración" value="No estoy de acuerdo"><span><img class="choice-status-icon" src="assets/icons-formulario/x.png" alt="">No</span></label></div></div>
+      <label id="castracionMotivo" class="adopt-field hidden">¿Por qué no estás de acuerdo?<textarea name="Motivo si no acepta la castración"></textarea></label>
+      <div class="question-card"><p>¿Entendés que puede necesitar 15/30 días o más para adaptarse? *</p><div class="choice-grid two"><label class="choice"><input required type="radio" name="¿Entendés el período de adaptación?" value="Sí"><span><img class="choice-status-icon" src="assets/icons-formulario/check.png" alt="">Sí, lo entiendo</span></label><label class="choice"><input type="radio" name="¿Entendés el período de adaptación?" value="No"><span><img class="choice-status-icon" src="assets/icons-formulario/x.png" alt="">No</span></label></div></div>
+      <label class="adopt-field">Si no logra adaptarse o tiene problemas de comportamiento, ¿qué harías? ¿Contactarías a un adiestrador? *<textarea required name="Qué harías ante problemas de comportamiento"></textarea></label>
+      <label class="adopt-field">En caso de mudanza, ¿qué harías con el animal? *<textarea required name="Qué harías si te mudás"></textarea></label>
+    </section>
+
+    <section class="adopt-step" data-adopt-step="6">
+      <div class="step-heading"><span class="step-icon"><img src="assets/icons-formulario/adopcion.png" alt=""></span><div><small>PASO 6</small><h3>Compromiso final</h3></div></div>
+      <p class="step-description">Llegaste al último paso. Solo nos quedan algunos compromisos importantes.</p>
+      <div class="commitment-card"><strong>El animal debe volver a nuestra asociación si ya no podés hacerte cargo.</strong><p>Bajo ningún concepto podrá ser entregado en una nueva adopción por tu cuenta.</p><div class="choice-grid two"><label class="choice"><input required type="radio" name="Compromiso de devolución a la ONG" value="Sí, estoy totalmente de acuerdo"><span><img class="choice-status-icon" src="assets/icons-formulario/check.png" alt="">Estoy de acuerdo</span></label><label class="choice"><input type="radio" name="Compromiso de devolución a la ONG" value="No estoy de acuerdo"><span><img class="choice-status-icon" src="assets/icons-formulario/x.png" alt="">No</span></label></div></div>
+      <div class="commitment-card"><strong>La calle no es opción.</strong><p>Siempre deberá estar supervisado, con collar, correa y chapita identificatoria.</p><div class="choice-grid two"><label class="choice"><input required type="radio" name="Compromiso de no dejarlo en la calle" value="Sí, estoy de acuerdo"><span><img class="choice-status-icon" src="assets/icons-formulario/check.png" alt="">Estoy de acuerdo</span></label><label class="choice"><input type="radio" name="Compromiso de no dejarlo en la calle" value="No estoy de acuerdo"><span><img class="choice-status-icon" src="assets/icons-formulario/x.png" alt="">No</span></label></div></div>
+      <div class="commitment-card"><strong>¿Estás de acuerdo con un seguimiento vía WhatsApp?</strong><div class="choice-grid two"><label class="choice"><input required type="radio" name="Aceptación del seguimiento por WhatsApp" value="Sí, estoy totalmente de acuerdo"><span><img class="choice-status-icon" src="assets/icons-formulario/check.png" alt="">Sí, estoy de acuerdo</span></label><label class="choice"><input type="radio" name="Aceptación del seguimiento por WhatsApp" value="No estoy de acuerdo"><span><img class="choice-status-icon" src="assets/icons-formulario/x.png" alt="">No</span></label></div></div>
+      <div class="commitment-card"><strong>La adopción es para toda la vida ❤️</strong><p>Un animal puede vivir entre 10 y 15 años o más. ¿Sos consciente de la responsabilidad?</p><div class="choice-grid two"><label class="choice"><input required type="radio" name="Conciencia de que la adopción es para toda la vida" value="Sí, soy consciente"><span><img class="choice-status-icon" src="assets/icons-formulario/check.png" alt="">Sí, soy consciente</span></label><label class="choice"><input type="radio" name="Conciencia de que la adopción es para toda la vida" value="No"><span><img class="choice-status-icon" src="assets/icons-formulario/x.png" alt="">No</span></label></div></div>
+      <label class="adopt-field">¿Cuál es tu usuario de Instagram o Facebook? *<input required name="Instagram o Facebook" type="text" placeholder="@usuario"></label>
+      <div class="final-note"><strong>Antes de enviar 🐾</strong><p>Si avanzamos con la adopción, podremos visitar el domicilio, conocer a la familia y formalizar el proceso mediante un contrato de adopción.</p></div>
+    </section>
+
+    <div class="turnstile-wrap">
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAFAbhjs7HU8tewhw"></div>
+      <small class="turnstile-note">Verificación de seguridad.</small>
+    </div>
+
+    <div class="adopt-actions">
+      <button type="button" class="btn secondary" id="adoptPrev">← Volver</button>
+      <button type="button" class="btn primary" id="adoptNext">Continuar →</button>
+      <button type="submit" class="btn primary hidden" id="adoptSubmit">Enviar solicitud ❤️</button>
+    </div>
+    <div id="formMsg" class="form-msg" role="alert"></div>
+  </form>
+
+  <div id="adoptSuccess" class="adopt-success" hidden aria-live="polite">
+    <div class="adopt-success-icon">🐾</div>
+    <span class="eyebrow">SOLICITUD RECIBIDA</span>
+    <h3>¡Gracias por tu solicitud!</h3>
+    <p>Recibimos correctamente tu solicitud de adopción. <strong>Vamos a evaluar la información</strong> y nos pondremos en contacto con vos cuando tengamos novedades.</p>
+    <div class="adopt-success-return">Volviendo al inicio…</div>
+  </div>
+</div>
+</dialog><script src="app.js"></script><script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script></body></html>

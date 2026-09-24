@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Panel | ONG Animales Ramallo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="panel.css">
+
+  <style id="mobile-keyboard-fix">
+    /* Mobile keyboard: keep the focused control comfortably visible. */
+    html.keyboard-open,
+    body.keyboard-open {
+      scroll-behavior: auto;
+    }
+
+    @media (max-width: 900px) {
+      body.keyboard-open .mobile-bottom-nav {
+        transform: translateY(120%);
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      body.keyboard-open .modal-backdrop.open {
+        align-items: flex-start;
+        overflow-y: auto;
+        padding-top: max(12px, env(safe-area-inset-top));
+        padding-bottom: 28px;
+      }
+
+      body.keyboard-open .animal-modal {
+        margin-top: 8px;
+        margin-bottom: 20px;
+      }
+
+      body.keyboard-open input:focus,
+      body.keyboard-open select:focus,
+      body.keyboard-open textarea:focus {
+        scroll-margin-top: 24px;
+        scroll-margin-bottom: 180px;
+      }
+    }
+
+    .mobile-bottom-nav {
+      transition: transform .18s ease, opacity .18s ease;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- OVERLAY MOBILE -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-top">
+
+      <div class="brand">
+        <div class="brand-mark">🐾</div>
+
+        <div class="brand-text">
+          <strong>ONG Animales</strong>
+          <span>Ramallo</span>
+        </div>
+      </div>
+
+      <button class="close-sidebar" id="closeSidebar" aria-label="Cerrar menú">
+        ×
+      </button>
+
+    </div>
+
+    <nav class="main-nav">
+
+      <button class="nav-item active" data-section="inicio">
+        <span class="nav-icon">⌂</span>
+        <span>Inicio</span>
+      </button>
+
+      <button class="nav-item" data-section="animales">
+        <span class="nav-icon">🐶</span>
+        <span>Animales</span>
+        <span class="nav-badge" id="sidebarAnimalsCount">0</span>
+      </button>
+
+      <button class="nav-item" data-section="solicitudes">
+        <span class="nav-icon">✉</span>
+        <span>Solicitudes</span>
+        <span class="nav-badge alert" id="sidebarRequestsCount">0</span>
+      </button>
+
+      <button class="nav-item" data-section="donaciones">
+        <span class="nav-icon">♥</span>
+        <span>Donaciones</span>
+      </button>
+
+      <div class="nav-divider"></div>
+
+      <p class="nav-label">GESTIÓN</p>
+
+      <button class="nav-item" data-section="contenido">
+        <span class="nav-icon">▤</span>
+        <span>Contenido</span>
+      </button>
+
+      <button class="nav-item" data-section="multimedia">
+        <span class="nav-icon">▧</span>
+        <span>Multimedia</span>
+      </button>
+
+      <button class="nav-item" data-section="configuracion">
+        <span class="nav-icon">⚙</span>
+        <span>Configuración</span>
+      </button>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+      <div class="help-card">
+        <div class="help-icon">?</div>
+
+        <div>
+          <strong>¿Necesitás ayuda?</strong>
+          <span>Centro de ayuda</span>
+        </div>
+      </div>
+
+      <button class="profile-mini">
+        <div class="avatar">C</div>
+
+        <div class="profile-info">
+          <strong>Celina</strong>
+          <span>Administradora</span>
+        </div>
+
+        <span class="profile-arrow">⋮</span>
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+      <button class="menu-button" id="openSidebar" aria-label="Abrir menú">
+        ☰
+      </button>
+
+      <div class="breadcrumb">
+        <span>Panel</span>
+        <span class="breadcrumb-separator">/</span>
+        <strong id="breadcrumbCurrent">Inicio</strong>
+      </div>
+
+      <div class="topbar-actions">
+
+        <button class="icon-button notification-button" title="Notificaciones">
+          ♢
+          <span class="notification-dot"></span>
+        </button>
+
+        <div class="topbar-user">
+          <div class="avatar">C</div>
+
+          <div>
+            <strong>Celina</strong>
+            <span>Administradora</span>
+          </div>
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- ========================= -->
+    <!-- INICIO — APP DE GESTIÓN -->
+    <!-- ========================= -->
+
+    <section class="page-section active-section" id="section-inicio">
+
+      <div class="app-welcome">
+        <div class="app-welcome-copy">
+          <p class="eyebrow">ANIMALES RAMALLO · GESTIÓN</p>
+          <h1>Buen día, Celina <span>👋</span></h1>
+          <p class="page-description">Todo lo que necesitás para cuidar y gestionar la ONG, en un solo lugar.</p>
+        </div>
+        <button class="home-main-action app-primary-cta" data-section="animales">
+          <span>＋</span> Agregar animal
+        </button>
+      </div>
+
+      <div class="app-command-grid" aria-label="Accesos principales">
+        <button class="command-card command-animals" data-section="animales">
+          <div class="command-top">
+            <span class="command-icon">🐾</span>
+            <span class="command-arrow">↗</span>
+          </div>
+          <div class="command-body">
+            <span class="command-kicker">GESTIONAR</span>
+            <strong>Animales</strong>
+            <span class="command-detail"><b id="statAnimals">0</b> publicados</span>
+          </div>
+          <span class="command-link">Ver animales →</span>
+        </button>
+
+        <button class="command-card command-requests" data-section="solicitudes">
+          <div class="command-top">
+            <span class="command-icon">✉</span>
+            <span class="command-arrow">↗</span>
+          </div>
+          <div class="command-body">
+            <span class="command-kicker">PARA REVISAR</span>
+            <strong>Solicitudes</strong>
+            <span class="command-detail"><b id="statRequests">0</b> pendientes</span>
+          </div>
+          <span class="command-link">Revisar solicitudes →</span>
+        </button>
+
+        <button class="command-card command-donations" data-section="donaciones">
+          <div class="command-top">
+            <span class="command-icon">$</span>
+            <span class="command-arrow">↗</span>
+          </div>
+          <div class="command-body">
+            <span class="command-kicker">CAMPAÑAS Y APORTES</span>
+            <strong>Donaciones</strong>
+            <span class="command-detail"><b id="statRaised">$0</b> recaudado</span>
+          </div>
+          <span class="command-link">Ver donaciones →</span>
+        </button>
+
+        <button class="command-card command-media" data-section="multimedia">
+          <div class="command-top">
+            <span class="command-icon">▧</span>
+            <span class="command-arrow">↗</span>
+          </div>
+          <div class="command-body">
+            <span class="command-kicker">IMÁGENES DE LA WEB</span>
+            <strong>Multimedia</strong>
+            <span class="command-detail">Fotos y recursos</span>
+          </div>
+          <span class="command-link">Abrir multimedia →</span>
+        </button>
+      </div>
+
+      <div class="app-secondary-grid">
+        <section class="quick-area">
+          <div class="app-section-heading">
+            <div>
+              <span class="section-overline">ACCESOS RÁPIDOS</span>
+              <h2>¿Qué necesitás hacer?</h2>
+            </div>
+          </div>
+
+          <div class="app-quick-list">
+            <button class="app-quick-row" data-section="solicitudes">
+              <span class="quick-icon terra">✉</span>
+              <span><strong>Revisar solicitudes</strong><small id="quickRequestsText">Hay 0 pendientes</small></span>
+              <b>→</b>
+            </button>
+            <button class="app-quick-row" data-section="animales">
+              <span class="quick-icon yellow">🐾</span>
+              <span><strong>Gestionar animales</strong><small>Agregar, editar o actualizar publicaciones</small></span>
+              <b>→</b>
+            </button>
+            <button class="app-quick-row" data-section="contenido">
+              <span class="quick-icon brown">▤</span>
+              <span><strong>Editar contenido</strong><small>Textos y secciones de la web</small></span>
+              <b>→</b>
+            </button>
+            <button class="app-quick-row" data-section="configuracion">
+              <span class="quick-icon cream">⚙</span>
+              <span><strong>Configuración</strong><small>Opciones del panel y administración</small></span>
+              <b>→</b>
+            </button>
+          </div>
+        </section>
+
+        <aside class="app-activity">
+          <div class="app-section-heading app-activity-heading">
+            <div>
+              <span class="section-overline">MOVIMIENTOS</span>
+              <h2>Actividad reciente</h2>
+            </div>
+            <button class="text-button">Ver todo</button>
+          </div>
+          <div class="activity-list" id="activityList"></div>
+        </aside>
+      </div>
+
+      <section class="app-animals-area">
+        <div class="app-section-heading app-animals-heading">
+          <div>
+            <span class="section-overline">LOS PROTAGONISTAS</span>
+            <h2>Animales publicados</h2>
+            <p>Los últimos animales agregados a la web.</p>
+          </div>
+          <button class="outline-button" data-section="animales">Ver todos</button>
+        </div>
+        <div class="animal-preview-grid app-animal-grid" id="featuredAnimalsGrid"></div>
+      </section>
+
+      <div class="app-footer-note">
+        <span>🐾</span>
+        <div><strong>Animales Ramallo</strong><small>Panel de gestión de la ONG</small></div>
+      </div>
+
+    </section>
+
+    <!-- OTRAS SECCIONES -->
+    <!-- ========================= -->
+
+ <section class="page-section" id="section-animales">
+
+  <div class="animals-header">
+
+    <div>
+      <p class="eyebrow">GESTIÓN DE ANIMALES</p>
+
+      <h1>Animales 🐾</h1>
+
+      <p class="page-description">
+        Administrá los animales que aparecen en la página.
+      </p>
+    </div>
+
+    <button class="primary-button open-animal-modal">
+      + Agregar animal
+    </button>
+
+  </div>
+
+
+  <!-- HERRAMIENTAS -->
+
+  <div class="animals-toolbar">
+
+    <div class="animal-search">
+
+      <span>⌕</span>
+
+      <input
+        type="search"
+        id="animalSearch"
+        placeholder="Buscar por nombre..."
+      >
+
+    </div>
+
+
+    <div class="animal-filters">
+
+      <button class="filter-button active" data-filter="todos">
+        Todos
+      </button>
+
+      <button class="filter-button" data-filter="adopcion">
+        En adopción
+      </button>
+
+      <button class="filter-button" data-filter="tratamiento">
+        Tratamiento
+      </button>
+
+      <button class="filter-button" data-filter="transito">
+        Tránsito
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- RESUMEN -->
+
+  <div class="animals-summary">
+
+    <div>
+      <strong id="animalsCount">12</strong>
+      <span>animales publicados</span>
+    </div>
+
+    <button class="sort-button" id="animalSort">
+      Ordenar ▾
+    </button>
+
+  </div>
+
+
+  <!-- LISTADO -->
+
+  <div class="animals-grid" id="animalsGrid">
+
+
+    <article class="animal-card" data-status="adopcion" data-name="aaron">
+
+      <div class="animal-card-image">
+
+        <div class="animal-photo-placeholder">
+          🐶
+        </div>
+
+        <span class="animal-featured">
+          ⭐ Destacado
+        </span>
+
+        <button class="animal-menu">
+          ⋮
+        </button>
+
+      </div>
+
+
+      <div class="animal-card-content">
+
+        <div class="animal-card-title">
+
+          <div>
+            <h3>Aaron</h3>
+
+            <p>Macho · Adulto · Mediano</p>
+          </div>
+
+          <span class="animal-status-pill adoption">
+            En adopción
+          </span>
+
+        </div>
+
+
+        <p class="animal-description">
+          Aaron es un perro cariñoso y juguetón que busca una familia
+          responsable que pueda darle mucho amor.
+        </p>
+
+
+        <div class="animal-card-actions">
+
+          <button class="secondary-action">
+            Ver
+          </button>
+
+          <button class="edit-action">
+            Editar
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article class="animal-card" data-status="adopcion" data-name="luna">
+
+      <div class="animal-card-image">
+
+        <div class="animal-photo-placeholder female">
+          🐶
+        </div>
+
+        <button class="animal-menu">
+          ⋮
+        </button>
+
+      </div>
+
+
+      <div class="animal-card-content">
+
+        <div class="animal-card-title">
+
+          <div>
+            <h3>Luna</h3>
+
+            <p>Hembra · Joven · Pequeña</p>
+          </div>
+
+          <span class="animal-status-pill adoption">
+            En adopción
+          </span>
+
+        </div>
+
+
+        <p class="animal-description">
+          Luna es dulce, activa y muy compañera.
+        </p>
+
+
+        <div class="animal-card-actions">
+
+          <button class="secondary-action">
+            Ver
+          </button>
+
+          <button class="edit-action">
+            Editar
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article class="animal-card" data-status="tratamiento" data-name="toby">
+
+      <div class="animal-card-image">
+
+        <div class="animal-photo-placeholder treatment-photo">
+          🐕
+        </div>
+
+        <button class="animal-menu">
+          ⋮
+        </button>
+
+      </div>
+
+
+      <div class="animal-card-content">
+
+        <div class="animal-card-title">
+
+          <div>
+            <h3>Toby</h3>
+
+            <p>Macho · Adulto · Grande</p>
+          </div>
+
+          <span class="animal-status-pill treatment">
+            Tratamiento
+          </span>
+
+        </div>
+
+
+        <p class="animal-description">
+          Toby se encuentra recuperándose y todavía no está disponible
+          para adopción.
+        </p>
+
+
+        <div class="animal-card-actions">
+
+          <button class="secondary-action">
+            Ver
+          </button>
+
+          <button class="edit-action">
+            Editar
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+    <section class="page-section" id="section-solicitudes">
+
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">GESTIÓN</p>
+          <h1>Solicitudes</h1>
+          <p class="page-description">
+            Revisá y gestioná las solicitudes recibidas.
+          </p>
+        </div>
+      </div>
+
+      <div class="empty-development-card">
+        <div class="development-icon">✉</div>
+        <h2>Solicitudes de adopción</h2>
+        <p>
+          Acá vamos a crear el sistema para revisar, gestionar y responder
+          las solicitudes.
+        </p>
+      </div>
+
+    </section>
+
+
+    <section class="page-section" id="section-donaciones">
+
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">GESTIÓN</p>
+          <h1>Donaciones</h1>
+          <p class="page-description">
+            Consultá las donaciones realizadas a la ONG.
+          </p>
+        </div>
+      </div>
+
+      <div class="empty-development-card">
+        <div class="development-icon">♥</div>
+        <h2>Donaciones</h2>
+        <p>
+          Acá vamos a construir el sistema de donaciones y sus registros.
+        </p>
+      </div>
+
+    </section>
+
+
+    <section class="page-section" id="section-contenido">
+
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">GESTIÓN</p>
+          <h1>Contenido</h1>
+          <p class="page-description">
+            Modificá los textos y secciones de la página.
+          </p>
+        </div>
+      </div>
+
+      <div class="empty-development-card">
+        <div class="development-icon">▤</div>
+        <h2>Contenido de la página</h2>
+        <p>
+          Acá podremos editar textos, banners, secciones y otros elementos
+          sin tocar código.
+        </p>
+      </div>
+
+    </section>
+
+
+    <section class="page-section" id="section-multimedia">
+
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">GESTIÓN</p>
+          <h1>Multimedia</h1>
+          <p class="page-description">
+            Administrá las imágenes utilizadas por la página.
+          </p>
+        </div>
+      </div>
+
+      <div class="empty-development-card">
+        <div class="development-icon">▧</div>
+        <h2>Biblioteca multimedia</h2>
+        <p>
+          Vamos a poder subir, reemplazar, eliminar y ordenar imágenes.
+        </p>
+      </div>
+
+    </section>
+
+
+    <section class="page-section" id="section-configuracion">
+
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">SISTEMA</p>
+          <h1>Configuración</h1>
+          <p class="page-description">
+            Configuraciones generales del panel.
+          </p>
+        </div>
+      </div>
+
+      <div class="empty-development-card">
+        <div class="development-icon">⚙</div>
+        <h2>Configuración</h2>
+        <p>
+          Acá estarán los administradores, datos de la ONG, seguridad
+          y configuraciones generales.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- NAVEGACIÓN MOBILE -->
+<nav class="mobile-bottom-nav">
+
+  <button class="mobile-nav-item active" data-section="inicio">
+    <span class="mobile-nav-icon">⌂</span>
+    <span>Inicio</span>
+  </button>
+
+  <button class="mobile-nav-item" data-section="animales">
+    <span class="mobile-nav-icon">🐶</span>
+    <span>Animales</span>
+  </button>
+
+  <button class="mobile-nav-item" data-section="solicitudes">
+    <span class="mobile-nav-icon">✉</span>
+    <span>Solicitudes</span>
+  </button>
+
+  <button class="mobile-nav-item" id="mobileMoreButton">
+    <span class="mobile-nav-icon">☰</span>
+    <span>Más</span>
+  </button>
+
+</nav>
+
+<!-- =========================================
+     MODAL AGREGAR ANIMAL
+========================================= -->
+
+<div class="modal-backdrop" id="animalModal">
+
+  <div class="animal-modal">
+
+    <div class="modal-header">
+
+      <div>
+        <p class="eyebrow" id="animalModalEyebrow">NUEVO ANIMAL</p>
+        <h2 id="animalModalTitle">Agregar animal 🐶</h2>
+      </div>
+
+      <button class="modal-close" id="closeAnimalModal">
+        ×
+      </button>
+
+    </div>
+
+
+    <form id="animalForm">
+
+
+      <!-- FOTOS -->
+
+      <div class="form-section">
+
+        <div class="form-section-title">
+
+          <div>
+            <h3>Fotos</h3>
+            <p>Agregá las fotos del animal.</p>
+          </div>
+
+        </div>
+
+
+        <div class="photo-upload-area" id="photoUploadArea">
+
+          <div class="upload-icon">
+            ↑
+          </div>
+
+          <strong>Subir fotos</strong>
+
+          <span>
+            Tocá acá para seleccionar imágenes
+          </span>
+
+          <input
+            type="file"
+            id="animalPhotos"
+            accept="image/*"
+            multiple
+            hidden
+          >
+
+        </div>
+
+
+        <div
+          class="photo-preview-list"
+          id="photoPreviewList">
+        </div>
+
+      </div>
+
+
+      <!-- INFORMACIÓN -->
+
+      <div class="form-section">
+
+        <div class="form-section-title">
+
+          <div>
+            <h3>Información del animal</h3>
+            <p>Datos que aparecerán en su ficha.</p>
+          </div>
+
+        </div>
+
+
+        <div class="form-grid">
+
+          <label class="form-field full">
+
+            <span>Nombre</span>
+
+            <input
+              type="text"
+              id="animalName"
+              placeholder="Ej. Aaron"
+              required
+            >
+
+          </label>
+
+
+          <label class="form-field">
+
+            <span>Sexo</span>
+
+            <select id="animalSex">
+
+              <option value="">Seleccionar</option>
+              <option value="Macho">Macho</option>
+              <option value="Hembra">Hembra</option>
+
+            </select>
+
+          </label>
+
+
+          <label class="form-field">
+
+            <span>Edad</span>
+
+            <input
+              type="text"
+              id="animalAge"
+              placeholder="Ej. 2 años"
+            >
+
+          </label>
+
+
+          <label class="form-field">
+
+            <span>Tamaño</span>
+
+            <select id="animalSize">
+
+              <option value="">Seleccionar</option>
+              <option>Pequeño</option>
+              <option>Mediano</option>
+              <option>Grande</option>
+
+            </select>
+
+          </label>
+
+
+          <label class="form-field">
+
+            <span>Estado</span>
+
+            <select id="animalStatus">
+
+              <option value="adopcion">
+                En adopción
+              </option>
+
+              <option value="tratamiento">
+                En tratamiento
+              </option>
+
+              <option value="transito">
+                En tránsito
+              </option>
+
+              <option value="adoptado">
+                Adoptado
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <label class="form-field full">
+
+            <span>Historia</span>
+
+            <textarea
+              id="animalStory"
+              rows="5"
+              placeholder="Contá la historia del animal..."
+            ></textarea>
+
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <!-- OPCIONES -->
+
+      <div class="form-section">
+
+        <div class="form-section-title">
+
+          <div>
+            <h3>Publicación</h3>
+            <p>Elegí cómo querés mostrarlo en la página.</p>
+          </div>
+
+        </div>
+
+
+        <label class="switch-row">
+
+          <div>
+
+            <strong>Mostrar en la página</strong>
+
+            <span>
+              El animal estará visible públicamente.
+            </span>
+
+          </div>
+
+          <input
+            type="checkbox"
+            id="animalPublished"
+            checked
+          >
+
+          <span class="switch"></span>
+
+        </label>
+
+
+        <label class="switch-row">
+
+          <div>
+
+            <strong>Destacar animal</strong>
+
+            <span>
+              Puede aparecer en lugares destacados.
+            </span>
+
+          </div>
+
+          <input
+            type="checkbox"
+            id="animalFeatured"
+          >
+
+          <span class="switch"></span>
+
+        </label>
+
+      </div>
+
+
+      <!-- ACCIONES -->
+
+      <div class="modal-actions">
+
+        <button
+          type="button"
+          class="cancel-button"
+          id="cancelAnimalModal">
+          Cancelar
+        </button>
+
+        <button
+          type="submit"
+          class="primary-button">
+          Guardar animal
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✓</span>
+    <span id="toastMessage">Acción realizada</span>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.4"></script>
+  <script src="panel.js"></script>
+
+</body>
+</html>

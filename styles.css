@@ -1,0 +1,2164 @@
+:root{--orange:#F7A921;--terracotta:#CB5128;--brown:#573623;--cream:#FFF8EC;--white:#fff;--muted:#806d5f;--line:#eadbc8;--shadow:0 18px 50px rgba(87,54,35,.12)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--brown);font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.nav{position:sticky;top:0;z-index:10;background:rgba(255,248,236,.94);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:14px 5%;border-bottom:1px solid var(--line)}.brand{display:flex;gap:10px;align-items:center;font-weight:900}.brand img{width:54px;height:54px;object-fit:contain;border-radius:50%;background:#fff;display:block;flex:0 0 54px}.nav nav{display:flex;gap:24px;font-weight:700}.nav nav a:hover{color:var(--terracotta)}.admin-link{color:var(--terracotta)}.menu{display:none;border:0;background:none;font-size:25px;color:var(--brown);cursor:pointer;width:44px;height:44px;border-radius:12px}.mobile-menu{display:none}.hero{max-width:1180px;margin:auto;padding:72px 5% 60px;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}.eyebrow{font-size:12px;letter-spacing:2px;font-weight:900;color:var(--terracotta)}h1{font-family:"Fraunces",Georgia,serif;font-size:clamp(42px,6vw,76px);line-height:.98;margin:16px 0;color:var(--brown)}h1 em{color:var(--terracotta);font-style:normal}h2{font-family:"Fraunces",Georgia,serif;font-size:clamp(30px,4vw,50px);line-height:1;margin:10px 0 16px}h3{margin:8px 0;font-size:22px}.hero p,.section-head p,.instagram p{font-size:18px;line-height:1.6;color:var(--muted);max-width:620px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 20px;border-radius:999px;font-weight:900;border:2px solid transparent;cursor:pointer}.primary{background:var(--orange);color:var(--brown)}.primary:hover{background:var(--terracotta);color:#fff}.secondary{border-color:var(--terracotta);color:var(--terracotta)}.hero-stat{font-weight:800}.hero-card{background:#fff;border-radius:30px;padding:12px;box-shadow:var(--shadow);transform:rotate(2deg)}.hero-card img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px}.hero-card span,.hero-card b{display:block;padding:6px 12px}.section{max-width:1180px;margin:auto;padding:80px 5%}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:28px}.section-head p{max-width:430px;margin:0}.dog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.dog-card{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 8px 30px rgba(87,54,35,.06);transition:.25s}.dog-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.dog-card img{width:100%;aspect-ratio:1/1;object-fit:cover}.dog-card .pad{padding:16px}.dog-card h3{margin:0 0 5px}.dog-card p{margin:0 0 12px;color:var(--muted);font-size:14px;min-height:42px}.mini-btn{border:0;background:var(--cream);color:var(--terracotta);padding:10px 12px;border-radius:12px;font-weight:900;cursor:pointer}.how{background:#fffaf1;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:none;padding-left:calc((100% - 1080px)/2);padding-right:calc((100% - 1080px)/2)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.steps article{padding:22px;border:1px solid var(--line);border-radius:20px;background:#fff}.steps b{color:var(--terracotta);font-size:13px}.steps p{color:var(--muted);line-height:1.5}.donation{background:var(--brown);color:#fff;max-width:none;padding-left:calc((100% - 1080px)/2);padding-right:calc((100% - 1080px)/2)}.donation .eyebrow{color:var(--orange)}.donation .section-head p{color:#eadfD2}.campaigns{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:20px}.campaign{background:#fff;color:var(--brown);padding:22px;border-radius:24px}.progress{height:14px;background:#eadbc8;border-radius:999px;overflow:hidden;margin:14px 0}.progress span{display:block;height:100%;background:var(--orange);border-radius:999px}.campaign-top{display:flex;justify-content:space-between;gap:10px}.campaign .small{color:var(--muted);font-size:14px}.donation-box{background:var(--orange);color:var(--brown);border-radius:28px;padding:26px}.amounts{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.amounts a{background:#fff;border-radius:14px;padding:12px 16px;font-weight:900}.instagram{text-align:center}.instagram p{margin:0 auto 22px}footer{padding:35px 5%;display:flex;justify-content:space-between;gap:20px;background:#3f291c;color:#fff;flex-wrap:wrap}footer div{display:grid;gap:5px}footer span{color:#d9c9bb}dialog{border:0;border-radius:28px;padding:0;max-width:720px;width:92%;color:var(--brown);box-shadow:var(--shadow)}dialog::backdrop{background:rgba(38,24,17,.55)}dialog>div{padding:30px}.close{position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:32px;color:var(--brown);cursor:pointer}.modal-dog{width:100%;max-height:360px;object-fit:cover;border-radius:18px}.story-wrap{margin-top:12px}.story-heading{display:flex;align-items:center;gap:8px;margin:18px 0 10px;font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--brown);text-transform:uppercase}.story-heading img{width:20px;height:20px;object-fit:contain;flex:0 0 20px}.story{color:var(--muted);line-height:1.58;font-size:15.5px}.story p{margin:0 0 11px}.story p:last-child{margin-bottom:0}.story-lead{font-weight:800;color:var(--brown)}.story-rescue{padding-left:13px;border-left:3px solid var(--accent);font-weight:600;color:#654635}.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}form{display:grid;gap:13px}label{font-weight:800;display:grid;gap:6px}input,textarea{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff;color:var(--brown)}textarea{min-height:90px;resize:vertical}.check{display:flex;grid-template-columns:auto 1fr;align-items:center;gap:8px;font-size:14px}.form-msg{font-weight:800}.form-msg.ok{color:#27733e}.form-msg.error{color:#a32e20}@media(max-width:850px){.nav nav{display:none}.menu{display:flex;align-items:center;justify-content:center}.mobile-menu{display:none;position:absolute;top:84px;left:5%;right:5%;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:var(--shadow);flex-direction:column;gap:4px}.mobile-menu.open{display:flex}.mobile-menu a{padding:14px 15px;border-radius:12px;font-weight:800}.mobile-menu a:hover{background:var(--cream);color:var(--terracotta)}.hero{grid-template-columns:1fr;padding-top:45px}.hero-card{max-width:480px;margin:auto}.dog-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr 1fr}.campaigns{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:14px}.how,.donation{padding-left:5%;padding-right:5%}}@media(max-width:520px){.dog-grid{grid-template-columns:1fr 1fr;gap:10px}.dog-card .pad{padding:12px}.dog-card p{min-height:0}.steps{grid-template-columns:1fr}.hero{padding-left:6%;padding-right:6%}h1{font-family:"Fraunces",Georgia,serif;font-size:43px}}
+
+.hero h1 em{display:inline-block}.dog-card h3,.steps h3,.campaign h3{font-family:"Fraunces",Georgia,serif}.nav{min-height:78px;position:relative}.brand span{font-family:"Fraunces",Georgia,serif;font-size:21px;font-weight:700;letter-spacing:-.5px;line-height:1.05}.section-head h2{letter-spacing:-.8px}.btn{letter-spacing:.2px;transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease}.btn:hover{transform:translateY(-2px)}
+
+
+/* HERO PELUDITOS — identidad visual y movimiento suave */
+.hero{position:relative;overflow:hidden;isolation:isolate}
+.hero-copy,.hero-card{position:relative;z-index:2}
+.hero-paws{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;opacity:.16}
+.hero-paws span{position:absolute;font-size:34px;filter:grayscale(1);color:var(--terracotta);animation:floatPaw 9s ease-in-out infinite;will-change:transform,opacity}
+.hero-paws span:nth-child(1){left:4%;top:12%;animation-delay:-1s;transform:rotate(-18deg);font-size:30px}
+.hero-paws span:nth-child(2){left:18%;top:70%;animation-delay:-5s;transform:rotate(24deg);font-size:27px}
+.hero-paws span:nth-child(3){left:38%;top:18%;animation-delay:-3s;transform:rotate(-28deg);font-size:24px}
+.hero-paws span:nth-child(4){left:53%;top:82%;animation-delay:-7s;transform:rotate(20deg);font-size:38px}
+.hero-paws span:nth-child(5){left:67%;top:10%;animation-delay:-2s;transform:rotate(-15deg);font-size:29px}
+.hero-paws span:nth-child(6){left:78%;top:62%;animation-delay:-6s;transform:rotate(25deg);font-size:25px}
+.hero-paws span:nth-child(7){left:91%;top:24%;animation-delay:-4s;transform:rotate(-20deg);font-size:32px}
+.hero-paws span:nth-child(8){left:30%;top:48%;animation-delay:-8s;transform:rotate(17deg);font-size:22px}
+.hero-paws span:nth-child(9){left:59%;top:42%;animation-delay:-1.5s;transform:rotate(-12deg);font-size:26px}
+.hero-paws span:nth-child(10){left:86%;top:87%;animation-delay:-4.5s;transform:rotate(18deg);font-size:24px}
+.hero-card{transition:transform .35s ease,box-shadow .35s ease}
+.hero-card.is-changing{transform:rotate(2deg) scale(.985);box-shadow:0 12px 34px rgba(87,54,35,.08)}
+.hero-image-wrap{overflow:hidden;border-radius:22px;background:var(--cream)}
+.hero-card img{transition:opacity .28s ease,transform .5s ease;opacity:1}
+.hero-card.is-changing img{opacity:.05;transform:scale(1.025)}
+.hero-caption{padding:5px 12px 12px}
+.hero-caption span,.hero-caption b,.hero-caption small{display:block}
+.hero-caption b{font-family:"Fraunces",Georgia,serif;font-size:27px;letter-spacing:.3px}
+.hero-caption small{color:var(--muted);font-size:13px;margin-top:2px}
+@keyframes floatPaw{0%,100%{transform:translate3d(0,0,0) rotate(-10deg);opacity:.08}50%{transform:translate3d(8px,-12px,0) rotate(8deg);opacity:.22}}
+@media(max-width:760px){.hero-paws{opacity:.13}.hero-paws span{font-size:27px}.hero-card{max-width:430px}.hero-caption b{font-size:24px}}
+@media(prefers-reduced-motion:reduce){.hero-paws span{animation:none}.hero-card,.hero-card img{transition:none}}
+
+@media(max-width:520px){.brand img{width:48px;height:48px;flex-basis:48px}.brand span{font-size:18px}.nav{min-height:70px}}
+
+/* =========================
+   ICONOS PERSONALIZADOS
+========================= */
+
+.steps article{
+  position:relative;
+  overflow:hidden;
+}
+
+.step-icon{
+  width:78px;
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:12px;
+  border-radius:20px;
+  background:var(--cream);
+}
+
+.step-icon img{
+  width:62px;
+  height:62px;
+  object-fit:contain;
+  display:block;
+}
+
+.steps article:nth-child(2) .step-icon img,
+.steps article:nth-child(3) .step-icon img,
+.steps article:nth-child(4) .step-icon img{
+  width:70px;
+  height:70px;
+}
+
+/* =========================
+   DONACIONES
+========================= */
+
+.donation-box{
+  display:grid;
+  grid-template-columns:minmax(180px, .65fr) minmax(0, 1.35fr);
+  gap:30px;
+  align-items:center;
+  padding:28px;
+  background:linear-gradient(135deg,var(--orange),#ffc95e);
+  box-shadow:0 20px 50px rgba(0,0,0,.16);
+  overflow:hidden;
+}
+
+.donation-visual{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:220px;
+}
+
+.donation-main-image{
+  display:block;
+  width:min(250px,100%);
+  height:250px;
+  object-fit:contain;
+  filter:drop-shadow(0 15px 18px rgba(87,54,35,.14));
+}
+
+.donation-content{
+  min-width:0;
+}
+
+.donation-heading{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+
+.donation-heading h3{
+  font-family:"Fraunces",Georgia,serif;
+  font-size:32px;
+  margin:7px 0 5px;
+}
+
+.donation-heading p{
+  margin:0;
+  color:rgba(87,54,35,.78);
+  line-height:1.5;
+}
+
+.mercadopago-logo{
+  width:155px;
+  max-width:28%;
+  height:auto;
+  object-fit:contain;
+  flex:0 0 auto;
+  mix-blend-mode:multiply;
+}
+
+.amounts{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+  margin:22px 0 18px;
+}
+
+.amounts a.amount-btn{
+  min-height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:9px 10px;
+  background:#fff;
+  color:var(--brown);
+  border:1px solid rgba(87,54,35,.10);
+  border-radius:15px;
+  font-weight:900;
+  box-shadow:0 6px 16px rgba(87,54,35,.08);
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+}
+
+.amounts a.amount-btn:hover{
+  transform:translateY(-3px);
+  background:#fffdf8;
+  box-shadow:0 12px 22px rgba(87,54,35,.14);
+}
+
+.amount-btn img{
+  width:28px;
+  height:28px;
+  object-fit:contain;
+  flex:0 0 28px;
+}
+
+.amount-btn span{
+  line-height:1;
+}
+
+.amount-special{
+  border-color:rgba(203,81,40,.28)!important;
+}
+
+.amount-monthly{
+  background:var(--brown)!important;
+  color:#fff!important;
+  border-color:var(--brown)!important;
+}
+
+.donation-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding-top:15px;
+  border-top:1px solid rgba(87,54,35,.18);
+}
+
+.donation-alias{
+  font-size:14px;
+}
+
+.secure-payment-image{
+  display:block;
+  width:110px;
+  height:70px;
+  object-fit:contain;
+  object-position:center;
+  border-radius:12px;
+}
+
+/* =========================
+   CAMPAÑAS
+========================= */
+
+.campaign{
+  position:relative;
+  box-shadow:0 10px 30px rgba(87,54,35,.08);
+}
+
+.campaign-title-wrap{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+}
+
+.campaign-active-logo{
+  width:52px;
+  height:52px;
+  object-fit:contain;
+  flex:0 0 52px;
+}
+
+.campaign-percent{
+  flex:0 0 auto;
+  background:var(--cream);
+  border-radius:999px;
+  padding:8px 10px;
+  font-size:13px;
+}
+
+.campaign-total{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.campaign-total span{
+  color:var(--muted);
+  font-size:12px;
+  font-weight:700;
+}
+
+
+/* =========================
+   ESTADO SIN CAMPAÑAS
+========================= */
+.campaign-empty{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  width:100%;
+  margin-bottom:20px;
+  padding:28px 30px;
+  background:linear-gradient(135deg,#fffdf8 0%,#fff4d9 100%);
+  color:var(--brown);
+  border:2px solid rgba(247,169,33,.38);
+  border-radius:26px;
+  box-shadow:0 14px 34px rgba(87,54,35,.10);
+}
+
+.campaign-empty::before{
+  content:"🐾     🐾     🐾     🐾     🐾     🐾";
+  position:absolute;
+  inset:-12px -30px auto -18px;
+  z-index:-1;
+  color:rgba(203,81,40,.075);
+  font-size:42px;
+  line-height:1.8;
+  letter-spacing:8px;
+  transform:rotate(-8deg);
+  white-space:normal;
+  pointer-events:none;
+}
+
+.campaign-empty::after{
+  content:"🐾     🐾     🐾     🐾";
+  position:absolute;
+  right:-12px;
+  bottom:-28px;
+  z-index:-1;
+  color:rgba(247,169,33,.12);
+  font-size:38px;
+  line-height:1.8;
+  letter-spacing:10px;
+  transform:rotate(7deg);
+  pointer-events:none;
+}
+
+.campaign-empty-icon{
+  width:58px;
+  height:58px;
+  flex:0 0 58px;
+  display:grid;
+  place-items:center;
+  border-radius:18px;
+  background:var(--cream);
+  font-size:27px;
+}
+
+.campaign-empty-copy{
+  min-width:0;
+}
+
+.campaign-empty-copy .eyebrow{
+  display:block;
+  margin-bottom:5px;
+}
+
+.campaign-empty-copy h3{
+  margin:0;
+  font-family:"Fraunces",Georgia,serif;
+  font-size:28px;
+  line-height:1.12;
+}
+
+.campaign-empty-copy p{
+  margin:7px 0 0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.55;
+  max-width:680px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:850px){
+  .donation-box{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .donation-visual{
+    min-height:150px;
+  }
+
+  .donation-main-image{
+    width:180px;
+    height:180px;
+  }
+
+  .amounts{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+
+@media(max-width:520px){
+  .step-icon{
+    width:68px;
+    height:68px;
+    border-radius:17px;
+  }
+
+  .step-icon img,
+  .steps article:nth-child(2) .step-icon img,
+  .steps article:nth-child(3) .step-icon img,
+  .steps article:nth-child(4) .step-icon img{
+    width:55px;
+    height:55px;
+  }
+
+  .donation-box{
+    padding:20px 16px;
+    border-radius:23px;
+  }
+
+  .donation-main-image{
+    width:145px;
+    height:145px;
+  }
+
+  .donation-heading{
+    display:block;
+  }
+
+  .donation-heading h3{
+    font-size:27px;
+  }
+
+  .mercadopago-logo{
+    width:145px;
+    max-width:100%;
+    margin-top:16px;
+  }
+
+  .amounts{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+  }
+
+  .amounts a.amount-btn{
+    min-height:54px;
+    font-size:14px;
+    padding:8px 7px;
+  }
+
+  .amount-btn img{
+    width:24px;
+    height:24px;
+    flex-basis:24px;
+  }
+
+  .donation-footer{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .secure-payment-image{
+    width:100px;
+    height:58px;
+  }
+
+  .campaign-active-logo{
+    width:44px;
+    height:44px;
+    flex-basis:44px;
+  }
+}
+
+.brand{gap:12px}
+.brand-name{display:inline-flex;align-items:center;gap:6px;font-family:"Fraunces",Georgia,serif;font-size:21px;font-weight:700;letter-spacing:-.5px;line-height:1.05}
+.verified-badge{width:14px;height:14px;object-fit:contain;display:block;flex:0 0 14px}
+@media(max-width:520px){.brand-name{font-size:18px}.verified-badge{width:13px;height:13px;flex-basis:13px}}
+
+
+/* =========================================================
+   DONACIONES — DISEÑO FINAL V4
+   Este bloque prevalece sobre estilos anteriores de donaciones.
+========================================================= */
+.donation-box{
+  position:relative;
+  display:grid;
+  grid-template-columns:300px minmax(0,1fr);
+  gap:42px;
+  align-items:center;
+  padding:34px;
+  background:radial-gradient(circle at 8% 8%,rgba(255,255,255,.38),transparent 30%),linear-gradient(135deg,rgba(224,154,58,.88) 0%,rgba(235,177,83,.88) 48%,rgba(245,207,125,.90) 100%);
+  border:1px solid rgba(255,255,255,.45);
+  border-radius:30px;
+  box-shadow:0 24px 60px rgba(87,54,35,.18),inset 0 1px 0 rgba(255,255,255,.38);
+  overflow:hidden;
+  color:var(--brown);
+}
+.donation-box::before,.donation-box::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.donation-box::before{width:280px;height:280px;right:-110px;top:-150px;background:rgba(255,255,255,.12)}
+.donation-box::after{width:190px;height:190px;left:210px;bottom:-130px;background:rgba(255,255,255,.08)}
+.donation-visual{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;min-height:300px}
+.donation-image-card{position:relative;width:260px;padding:14px;background:rgba(255,255,255,.96);border-radius:24px;box-shadow:0 20px 40px rgba(87,54,35,.18),0 4px 10px rgba(87,54,35,.08);transform:rotate(-2deg);transition:transform .3s ease,box-shadow .3s ease}
+.donation-image-card:hover{transform:rotate(0deg) translateY(-5px);box-shadow:0 28px 55px rgba(87,54,35,.22),0 6px 14px rgba(87,54,35,.10)}
+.donation-image-glow{position:absolute;width:130px;height:130px;left:-30px;top:-35px;border-radius:50%;background:rgba(255,255,255,.45);filter:blur(30px);pointer-events:none}
+.donation-main-image{position:relative;display:block;width:100%;height:210px;object-fit:contain;border-radius:16px;filter:drop-shadow(0 10px 12px rgba(87,54,35,.10))}
+.donation-image-caption{position:relative;display:flex;align-items:center;gap:10px;margin-top:8px;padding:10px 8px 4px;color:var(--brown)}
+.donation-image-caption>span{width:34px;height:34px;display:flex;align-items:center;justify-content:center;flex:0 0 34px;background:#fff5d9;border-radius:11px;font-size:17px}
+.donation-image-caption strong{display:block;font-size:13px;line-height:1.2}
+.donation-image-caption small{display:block;margin-top:3px;color:var(--muted);font-size:11px}
+.donation-content{position:relative;z-index:1;min-width:0}
+.donation-heading{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.donation-heading-copy{min-width:0}
+.donation-kicker{display:block;font-size:11px;font-weight:900;letter-spacing:2px;color:rgba(87,54,35,.60)}
+.donation-heading h3{font-family:"Fraunces",Georgia,serif;font-size:clamp(30px,3vw,40px);line-height:1.05;margin:8px 0;color:var(--brown)}
+.donation-heading p{margin:0;max-width:650px;color:rgba(87,54,35,.78);font-size:15px;line-height:1.55}
+.mercadopago-logo{display:block;width:180px;max-width:180px;height:auto;object-fit:contain;flex:0 0 180px;margin:0;mix-blend-mode:normal;border-radius:18px;box-shadow:0 8px 22px rgba(87,54,35,.10)}
+.donation-divider{height:1px;margin:22px 0 18px;background:rgba(87,54,35,.16)}
+.donation-amount-label{display:flex;align-items:baseline;justify-content:space-between;gap:15px;margin-bottom:10px}
+.donation-amount-label span{font-size:14px;font-weight:900}
+.donation-amount-label small{color:rgba(87,54,35,.62);font-size:12px}
+.amounts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 20px}
+.amounts a.amount-btn{position:relative;min-height:58px;display:flex;align-items:center;justify-content:center;gap:9px;padding:10px 12px;background:rgba(255,255,255,.97);color:var(--brown);border:1px solid rgba(87,54,35,.08);border-radius:15px;font-size:15px;font-weight:900;box-shadow:0 5px 15px rgba(87,54,35,.08);transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.amounts a.amount-btn:hover{transform:translateY(-3px);background:#fff;box-shadow:0 12px 25px rgba(87,54,35,.16)}
+.amount-btn img{width:27px;height:27px;object-fit:contain;flex:0 0 27px}
+.amount-btn span{line-height:1}
+.amount-special{border:1px solid rgba(203,81,40,.35)!important;background:#fffaf0!important}
+.amount-monthly{background:var(--brown)!important;color:#fff!important;border-color:var(--brown)!important;box-shadow:0 8px 20px rgba(87,54,35,.22)!important}
+.amount-monthly:hover{background:#43291c!important}
+.donation-bottom{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;padding-top:17px;border-top:1px solid rgba(87,54,35,.16)}
+.alias-copy-card{width:100%;min-width:0;display:flex;align-items:center;gap:11px;padding:12px 14px;background:rgba(255,255,255,.40);border:1px solid rgba(255,255,255,.55);border-radius:15px;color:var(--brown);text-align:left;cursor:pointer;transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+.alias-copy-card:hover{transform:translateY(-2px);background:rgba(255,255,255,.60);box-shadow:0 8px 20px rgba(87,54,35,.10)}
+.alias-copy-card:active{transform:translateY(0)}
+.alias-icon{width:38px;height:38px;display:flex;align-items:center;justify-content:center;flex:0 0 38px;background:#fff5d9;border-radius:11px;font-size:18px}
+.alias-info{display:flex;flex-direction:column;min-width:0}
+.alias-info small{display:block;color:rgba(87,54,35,.65);font-size:11px}
+.alias-info strong{display:block;margin-top:2px;font-size:13px}
+.alias-info b{color:#d99100;letter-spacing:.3px}
+.copy-label{margin-left:auto;flex:0 0 auto;padding:8px 10px;border-radius:9px;background:rgba(87,54,35,.10);color:var(--brown);font-size:10px;font-weight:900;white-space:nowrap}
+.secure-payment{display:flex;align-items:center;justify-content:center;min-width:245px;padding:6px;background:rgba(255,255,255,.52);border:1px solid rgba(255,255,255,.65);border-radius:14px}
+.secure-payment-image{display:block;width:225px;height:auto;max-width:100%;object-fit:contain;border-radius:9px}
+@media(max-width:950px){
+  .donation-box{grid-template-columns:250px minmax(0,1fr);gap:25px;padding:27px}
+  .donation-heading{gap:18px}
+  .mercadopago-logo{width:155px;max-width:155px;flex-basis:155px}
+  .amounts{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .donation-bottom{grid-template-columns:1fr}
+  .secure-payment{min-width:0;justify-content:flex-start}
+}
+@media(max-width:700px){
+  .donation-box{grid-template-columns:1fr;gap:22px;padding:25px}
+  .donation-visual{min-height:0}
+  .donation-image-card{width:250px}
+  .donation-main-image{height:200px}
+  .donation-heading{align-items:flex-start}
+  .mercadopago-logo{width:165px;max-width:165px;flex-basis:165px}
+}
+@media(max-width:520px){
+  .donation-box{padding:20px 16px;border-radius:23px}
+  .donation-image-card{width:220px}
+  .donation-main-image{height:175px}
+  .donation-heading{display:block}
+  .donation-heading h3{font-size:29px}
+  .donation-heading p{font-size:14px}
+  .mercadopago-logo{width:100%;max-width:260px;margin-top:16px}
+  .donation-amount-label{display:block}
+  .donation-amount-label small{display:block;margin-top:3px}
+  .amounts{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .amounts a.amount-btn{min-height:55px;font-size:14px;padding:8px 6px}
+  .amount-btn img{width:23px;height:23px;flex-basis:23px}
+  .alias-copy-card{align-items:flex-start;padding:11px 10px}
+  .copy-label{margin-top:4px;padding:7px 8px}
+  .secure-payment{padding:6px}
+  .secure-payment-image{width:100%;max-width:100%;height:auto}
+}
+
+/* =========================================================
+   DONACIONES — AJUSTE MOBILE V5
+   Centrado y mayor protagonismo para Mercado Pago, alias y pago seguro.
+========================================================= */
+@media(max-width:520px){
+  .donation-heading{
+    text-align:left;
+  }
+
+  .mercadopago-logo{
+    display:block;
+    width:min(310px,100%);
+    max-width:310px;
+    margin:18px auto 0;
+    border-radius:18px;
+  }
+
+  .donation-bottom{
+    grid-template-columns:1fr;
+    gap:12px;
+    padding-top:18px;
+  }
+
+  .alias-copy-card{
+    min-height:76px;
+    align-items:center;
+    gap:12px;
+    padding:14px 13px;
+    border-radius:17px;
+    box-shadow:0 6px 16px rgba(87,54,35,.08);
+  }
+
+  .alias-icon{
+    width:44px;
+    height:44px;
+    flex-basis:44px;
+    font-size:20px;
+    border-radius:12px;
+  }
+
+  .alias-info small{
+    font-size:12px;
+  }
+
+  .alias-info strong{
+    margin-top:3px;
+    font-size:16px;
+  }
+
+  .alias-info b{
+    font-size:17px;
+  }
+
+  .copy-label{
+    margin-left:auto;
+    padding:9px 10px;
+    border-radius:10px;
+    font-size:10px;
+  }
+
+  .secure-payment{
+    width:100%;
+    min-height:76px;
+    padding:8px 10px;
+    justify-content:center;
+    border-radius:17px;
+    box-shadow:0 6px 16px rgba(87,54,35,.07);
+  }
+
+  .secure-payment-image{
+    display:block;
+    width:min(360px,100%);
+    max-width:360px;
+    height:auto;
+    margin:0 auto;
+  }
+}
+
+@media(max-width:380px){
+  .mercadopago-logo{
+    width:min(285px,100%);
+  }
+
+  .alias-copy-card{
+    min-height:72px;
+    padding:12px 10px;
+  }
+
+  .alias-icon{
+    width:40px;
+    height:40px;
+    flex-basis:40px;
+  }
+
+  .alias-info strong,
+  .alias-info b{
+    font-size:15px;
+  }
+
+  .copy-label{
+    font-size:9px;
+    padding:8px 7px;
+  }
+
+  .secure-payment{
+    min-height:72px;
+  }
+}
+
+/* HEADER — tamaño del nombre y verificado */
+
+.brand {
+  min-width: 0;
+  flex: 1 1 auto;
+  gap: 10px;
+}
+
+.brand-name {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 4px !important;
+  white-space: nowrap;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 18px !important;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1 !important;
+}
+
+.verified-badge {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px !important;
+  object-fit: contain;
+  display: block;
+  margin: 0 !important;
+}
+
+@media (max-width: 520px) {
+  .brand {
+    gap: 10px;
+  }
+
+  .brand img {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+  }
+
+  .brand-name {
+    font-size: 18px !important;
+    gap: 4px !important;
+  }
+
+  .verified-badge {
+    width: 14px !important;
+    height: 14px !important;
+    flex-basis: 14px !important;
+  }
+
+  .menu {
+    flex: 0 0 44px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-name {
+    font-size: 17px !important;
+  }
+
+  .verified-badge {
+    width: 13px !important;
+    height: 13px !important;
+    flex-basis: 13px !important;
+  }
+}
+
+
+@media(max-width:520px){
+  .campaign-empty{
+    align-items:flex-start;
+    gap:14px;
+    padding:20px 17px;
+    border-radius:21px;
+  }
+
+  .campaign-empty-icon{
+    width:48px;
+    height:48px;
+    flex-basis:48px;
+    border-radius:15px;
+    font-size:22px;
+  }
+
+  .campaign-empty-copy h3{
+    font-size:21px;
+  }
+
+  .campaign-empty-copy p{
+    font-size:13px;
+    line-height:1.5;
+  }
+}
+
+
+
+/* =========================================================
+   CAMPAÑAS — MOBILE FINAL
+   Una campaña ocupa todo el ancho disponible en celular.
+========================================================= */
+@media(max-width:850px){
+  .campaigns{
+    grid-template-columns:1fr;
+    width:100%;
+  }
+
+  .campaign{
+    width:100%;
+  }
+}
+
+@media(max-width:520px){
+  .campaigns{
+    width:100%;
+    margin-bottom:18px;
+  }
+
+  .campaign{
+    width:100%;
+    padding:19px 16px;
+    border-radius:20px;
+  }
+
+  .campaign-title-wrap{
+    gap:9px;
+  }
+
+  .campaign-active-logo{
+    width:46px;
+    height:46px;
+    flex-basis:46px;
+  }
+
+  .campaign h3{
+    font-size:19px;
+    line-height:1.1;
+  }
+
+  .campaign-percent{
+    padding:7px 9px;
+    font-size:12px;
+  }
+
+  .campaign-empty{
+    width:100%;
+    min-height:175px;
+    align-items:center;
+    gap:13px;
+    padding:24px 18px;
+    border-radius:22px;
+  }
+
+  .campaign-empty::before{
+    font-size:34px;
+    letter-spacing:4px;
+    inset:-7px -22px auto -18px;
+  }
+
+  .campaign-empty::after{
+    font-size:31px;
+    letter-spacing:5px;
+    right:-18px;
+    bottom:-24px;
+  }
+
+  .campaign-empty-icon{
+    width:52px;
+    height:52px;
+    flex-basis:52px;
+    border-radius:16px;
+    font-size:24px;
+    background:#fff;
+    box-shadow:0 6px 16px rgba(87,54,35,.08);
+  }
+
+  .campaign-empty-copy h3{
+    font-size:22px;
+  }
+
+  .campaign-empty-copy p{
+    font-size:13px;
+    line-height:1.5;
+  }
+}
+
+
+/* =========================================================
+   MENÚ MÓVIL — DRAWER INTERACTIVO
+   Cambio aislado del menú desplegable.
+========================================================= */
+@media (max-width:850px){
+  body.menu-is-open{overflow:hidden}
+  .menu-overlay{
+    position:fixed;
+    inset:0;
+    z-index:80;
+    background:rgba(63,41,28,.42);
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition:opacity .35s ease,visibility .35s ease;
+  }
+  .menu-overlay.open{opacity:1;visibility:visible;pointer-events:auto}
+  .mobile-menu{
+    display:flex !important;
+    position:fixed !important;
+    z-index:90 !important;
+    top:0 !important;
+    right:0 !important;
+    left:auto !important;
+    width:min(430px,92vw) !important;
+    height:100dvh;
+    max-height:100dvh;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    flex-direction:column !important;
+    gap:0 !important;
+    padding:24px 18px 22px !important;
+    background:linear-gradient(160deg,#fffaf0 0%,#fff7e9 68%,#fff1dc 100%) !important;
+    border:0 !important;
+    border-left:1px solid rgba(87,54,35,.10) !important;
+    border-radius:28px 0 0 28px !important;
+    box-shadow:-24px 0 70px rgba(63,41,28,.22) !important;
+    transform:translateX(105%);
+    visibility:hidden;
+    pointer-events:none;
+    transition:transform .48s cubic-bezier(.22,1,.36,1),visibility 0s linear .48s;
+  }
+  .mobile-menu.open{
+    transform:translateX(0);
+    visibility:visible;
+    pointer-events:auto;
+    transition:transform .48s cubic-bezier(.22,1,.36,1),visibility 0s linear 0s;
+  }
+  .mobile-menu-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}
+  .mobile-menu-brand{display:flex;align-items:center;gap:10px;min-width:0}
+  .mobile-menu-brand img{width:50px;height:50px;flex:0 0 50px;object-fit:contain;border-radius:50%;background:#fff}
+  .mobile-menu-brand span{display:grid;gap:3px;min-width:0}
+  .mobile-menu-brand strong{font-family:"Fraunces",Georgia,serif;font-size:17px;line-height:1.05;white-space:nowrap}
+  .mobile-menu-brand small{font-size:10px;color:var(--muted);line-height:1.25}
+  .menu-close{width:42px;height:42px;flex:0 0 42px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--brown);font-size:28px;line-height:1;cursor:pointer;box-shadow:0 8px 20px rgba(87,54,35,.08);transition:transform .2s ease,background .2s ease}
+  .menu-close:hover{transform:rotate(8deg) scale(1.04);background:var(--cream)}
+  .mobile-menu-intro{margin:0 4px 18px}
+  .menu-kicker{font-size:10px;letter-spacing:2px;font-weight:900;color:var(--terracotta)}
+  .mobile-menu-intro h2{font-size:34px;margin:6px 0 4px;letter-spacing:-1px}
+  .mobile-menu-intro p{margin:0;color:var(--muted);font-size:14px}
+  .menu-actions{display:grid;gap:11px}
+  .menu-card{position:relative;display:flex !important;align-items:center;gap:12px;min-height:84px;padding:11px 12px;border:1px solid rgba(87,54,35,.08) !important;border-radius:22px !important;color:var(--brown) !important;overflow:hidden;transform:translateY(16px);opacity:0;box-shadow:0 8px 24px rgba(87,54,35,.06);transition:transform .28s ease,box-shadow .28s ease,filter .28s ease}
+  .mobile-menu.open .menu-card{animation:menuCardIn .55s cubic-bezier(.22,1,.36,1) forwards}
+  .mobile-menu.open .menu-card:nth-child(1){animation-delay:.08s}.mobile-menu.open .menu-card:nth-child(2){animation-delay:.14s}.mobile-menu.open .menu-card:nth-child(3){animation-delay:.20s}
+  .mobile-menu.open>.menu-admin{animation-delay:.28s}
+  .menu-card:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px rgba(87,54,35,.12);filter:saturate(1.04)}
+  .menu-adopt{background:#dff1fb !important}.menu-how{background:#fff0df !important}.menu-donate{background:#ffc84d !important}
+  .menu-admin{background:var(--brown) !important;color:#fff !important;margin-top:0}
+  .menu-icon{width:60px;height:60px;flex:0 0 60px;border-radius:18px;background:rgba(255,255,255,.60);display:grid;place-items:center;overflow:hidden;transition:transform .28s ease}
+  .menu-card:hover .menu-icon{transform:scale(1.07) rotate(-2deg)}
+  .menu-icon img{width:53px;height:53px;object-fit:contain;display:block}
+  .menu-card-copy{display:grid;gap:3px;min-width:0;flex:1}
+  .menu-card-copy b{font-family:"Fraunces",Georgia,serif;font-size:20px;line-height:1.05}
+  .menu-card-copy small{font-size:11px;line-height:1.25;opacity:.72}
+  .menu-admin .menu-card-copy small{color:#eadfd5;opacity:1}.menu-admin .menu-icon{background:rgba(255,255,255,.12)}
+  .menu-arrow{width:34px;height:34px;flex:0 0 34px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.62);font-size:20px;transition:transform .25s ease}
+  .menu-admin .menu-arrow{background:rgba(255,255,255,.12);color:#fff}.menu-card:hover .menu-arrow{transform:translateX(4px)}
+  .menu-divider{display:flex;align-items:center;gap:10px;margin:18px 3px 15px;color:#b9997e}
+  .menu-divider:before,.menu-divider:after{content:"";height:1px;flex:1;background:var(--line)}
+  .menu-divider span{font-size:17px;line-height:1}
+  .mobile-menu-footer{display:grid;gap:3px;text-align:center;margin-top:auto;padding:20px 8px 0;color:var(--muted);font-size:12px}
+  .mobile-menu-footer b{font-family:"Fraunces",Georgia,serif;font-size:14px;color:var(--brown)}
+  .instagram-btn{gap:9px}
+  .instagram-btn img{width:25px;height:25px;object-fit:contain;display:block}
+}
+@keyframes menuCardIn{to{transform:translateY(0);opacity:1}}
+@media(max-width:430px){
+  .mobile-menu{width:94vw;padding:20px 14px 18px !important;border-radius:24px 0 0 24px !important}
+  .mobile-menu-intro h2{font-size:31px}
+  .menu-icon{width:55px;height:55px;flex-basis:55px}.menu-icon img{width:49px;height:49px}
+  .menu-card{min-height:78px;border-radius:19px !important}.menu-card-copy b{font-size:18px}.menu-card-copy small{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){.mobile-menu,.menu-overlay,.menu-card,.menu-icon,.menu-arrow,.menu-close{transition:none !important}.mobile-menu.open .menu-card{animation:none;opacity:1;transform:none}}
+
+/* =========================================================
+   CÓMO FUNCIONA — tarjetas centradas
+========================================================= */
+.steps article{text-align:center;display:flex;flex-direction:column;align-items:center}
+.steps article .step-icon{margin-left:auto;margin-right:auto}
+
+/* INSTAGRAM — icono de la ONG dentro del botón */
+.instagram-btn{display:inline-flex;align-items:center}
+.instagram-btn img{width:26px;height:26px;object-fit:contain}
+
+/* =========================================================
+   COMPATIBILIDAD DESKTOP — mantener intacta la versión PC
+   El drawer y su overlay existen únicamente en móvil.
+========================================================= */
+.menu-overlay{display:none}
+
+@media (min-width:851px){
+  .desktop-nav{display:flex !important}
+  .menu{display:none !important}
+  .menu-overlay{display:none !important}
+  .mobile-menu{display:none !important}
+  body.menu-is-open{overflow:auto}
+}
+
+@media (max-width:850px){
+  .menu-overlay{display:block}
+}
+
+/* =========================================================
+   V6 — refinamiento visual del menú
+   Solo afecta al menú móvil y a su botón.
+========================================================= */
+@media (max-width:850px){
+  .menu{
+    position:relative;
+    overflow:hidden;
+    background:rgba(255,255,255,.42) !important;
+    border:1px solid rgba(87,54,35,.10) !important;
+    box-shadow:0 7px 18px rgba(87,54,35,.07);
+    transition:transform .22s ease, box-shadow .22s ease, background .22s ease;
+  }
+  .menu img{
+    width:24px;
+    height:24px;
+    display:block;
+    object-fit:contain;
+    opacity:.72;
+    transition:transform .28s cubic-bezier(.22,1,.36,1),opacity .22s ease;
+  }
+  .menu:hover,.menu:focus-visible{
+    background:#fff !important;
+    box-shadow:0 10px 24px rgba(87,54,35,.12);
+    transform:translateY(-1px);
+    outline:none;
+  }
+  .menu:hover img,.menu:focus-visible img{opacity:.92;transform:scale(1.08) rotate(-4deg)}
+  .menu[aria-expanded="true"] img{transform:rotate(90deg) scale(.92);opacity:.9}
+
+  .mobile-menu{
+    isolation:isolate;
+  }
+  .mobile-menu::before{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    top:-100px;
+    right:-85px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(247,169,33,.16) 0%,rgba(247,169,33,0) 68%);
+    pointer-events:none;
+    z-index:-1;
+  }
+  .mobile-menu::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    left:-110px;
+    bottom:70px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(203,81,40,.08) 0%,rgba(203,81,40,0) 70%);
+    pointer-events:none;
+    z-index:-1;
+  }
+  .mobile-menu-intro{
+    text-align:center;
+    margin:2px 8px 23px;
+    padding:2px 8px 0;
+  }
+  .mobile-menu-intro h2{
+    margin:0 0 7px;
+    font-size:34px;
+    line-height:1.02;
+    letter-spacing:-1.2px;
+  }
+  .mobile-menu-intro p{
+    margin:0 auto;
+    max-width:285px;
+    line-height:1.45;
+    font-size:13px;
+  }
+  .mobile-menu-head{margin-bottom:19px}
+  .menu-actions{position:relative}
+  .menu-card{
+    will-change:transform,opacity;
+  }
+  .menu-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-45%;
+    width:28%;
+    height:100%;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.34),transparent);
+    transform:skewX(-18deg);
+    opacity:0;
+    transition:left .55s ease,opacity .2s ease;
+    pointer-events:none;
+  }
+  .menu-card:hover::before,.menu-card:focus-visible::before{left:125%;opacity:1}
+  .menu-card:active{transform:scale(.985) !important}
+  .menu-divider span{
+    display:grid;
+    place-items:center;
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:rgba(255,255,255,.6);
+    box-shadow:0 5px 12px rgba(87,54,35,.06);
+  }
+}
+@media(max-width:430px){
+  .mobile-menu-intro{margin-bottom:20px}
+  .mobile-menu-intro h2{font-size:31px}
+  .menu img{width:22px;height:22px}
+}
+
+/* Instagram CTA — icono un poco más grande */
+.instagram-btn img{width:34px;height:34px;object-fit:contain;flex:0 0 34px}
+@media(max-width:850px){.instagram-btn img{width:32px;height:32px;flex-basis:32px}}
+
+
+/* DONACIONES — ajuste titular, icono y espaciado */
+.alias-icon{overflow:hidden;padding:4px;background:#fff5d9}
+.alias-icon img{display:block;width:100%;height:100%;object-fit:contain}
+.alias-holder{margin-top:4px;color:rgba(87,54,35,.72)!important;font-size:11px!important;line-height:1.25}
+.alias-holder b{color:var(--brown)!important;font-weight:800}
+.amounts a.amount-monthly{text-align:center;justify-content:center}
+.donation-bottom{padding-top:28px;row-gap:22px}
+.secure-payment{margin-top:8px}
+@media(max-width:950px){
+  .donation-bottom{padding-top:26px;row-gap:20px}
+  .secure-payment{margin-top:10px}
+}
+@media(max-width:520px){
+  .alias-icon{padding:3px}
+  .alias-holder{font-size:10.5px!important}
+  .donation-bottom{padding-top:24px;gap:16px}
+  .secure-payment{margin-top:4px}
+}
+
+
+/* CORRECCION MOVIL — evitar desplazamiento horizontal accidental */
+html, body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+@supports not (overflow: clip) {
+  html, body { overflow-x: hidden; }
+}
+@media (max-width: 850px) {
+  body {
+    width: 100%;
+    overscroll-behavior-x: none;
+  }
+  .hero, .section, .nav, footer {
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================================
+   V11 — apertura del menú más intrigante + entrada escalonada
+   Solo móvil
+========================================================= */
+@media (max-width:850px){
+  /* Botón: llama la atención sin usar rojo ni texto invasivo */
+  .menu{
+    position:relative;
+    isolation:isolate;
+    overflow:visible !important;
+    background:rgba(255,255,255,.72) !important;
+    border:1px solid rgba(87,54,35,.13) !important;
+    box-shadow:0 7px 20px rgba(87,54,35,.09);
+  }
+  .menu::before{
+    content:"";
+    position:absolute;
+    inset:-5px;
+    border:1px solid rgba(203,81,40,.22);
+    border-radius:15px;
+    opacity:0;
+    transform:scale(.86);
+    pointer-events:none;
+    animation:menuButtonPulse 3.6s ease-in-out infinite;
+  }
+  .menu::after{
+    content:"";
+    position:absolute;
+    width:7px;
+    height:7px;
+    right:4px;
+    top:4px;
+    border-radius:50%;
+    background:var(--terracotta);
+    opacity:.55;
+    box-shadow:0 0 0 0 rgba(203,81,40,.25);
+    animation:menuDotPulse 3.6s ease-in-out infinite;
+    pointer-events:none;
+  }
+  .menu img{
+    width:25px !important;
+    height:25px !important;
+    opacity:.78;
+    transform-origin:center;
+  }
+  .menu:hover img,.menu:focus-visible img{transform:scale(1.10) rotate(-5deg)}
+  .menu[aria-expanded="true"]::before,.menu[aria-expanded="true"]::after{animation:none;opacity:0}
+  .menu[aria-expanded="true"] img{transform:scale(.95) rotate(8deg);opacity:.9}
+
+  /* Drawer: primeiro entra o topo, depois o texto e por último as ações */
+  .mobile-menu-head,
+  .mobile-menu-intro,
+  .menu-card,
+  .menu-divider,
+  .mobile-menu-footer{
+    opacity:0;
+  }
+  .mobile-menu-head{
+    transform:translateY(-12px);
+  }
+  .mobile-menu-intro{
+    transform:translateY(-8px);
+  }
+  .menu-card{
+    transform:translateY(-12px) !important;
+  }
+  .menu-divider{
+    transform:translateY(-8px);
+  }
+  .mobile-menu-footer{
+    transform:translateY(-6px);
+  }
+
+  .mobile-menu.open .mobile-menu-head{
+    animation:menuHeadIn .48s cubic-bezier(.22,1,.36,1) .05s forwards;
+  }
+  .mobile-menu.open .mobile-menu-intro{
+    animation:menuIntroIn .55s cubic-bezier(.22,1,.36,1) .17s forwards;
+  }
+  .mobile-menu.open .menu-actions .menu-card:nth-child(1){
+    animation:menuActionIn .55s cubic-bezier(.22,1,.36,1) .34s forwards;
+  }
+  .mobile-menu.open .menu-actions .menu-card:nth-child(2){
+    animation:menuActionIn .55s cubic-bezier(.22,1,.36,1) .43s forwards;
+  }
+  .mobile-menu.open .menu-actions .menu-card:nth-child(3){
+    animation:menuActionIn .55s cubic-bezier(.22,1,.36,1) .52s forwards;
+  }
+  .mobile-menu.open .menu-divider{
+    animation:menuDividerIn .45s ease .62s forwards;
+  }
+  .mobile-menu.open > .menu-admin{
+    animation:menuActionIn .55s cubic-bezier(.22,1,.36,1) .69s forwards;
+  }
+  .mobile-menu.open .mobile-menu-footer{
+    animation:menuFooterIn .45s ease .80s forwards;
+  }
+}
+
+@keyframes menuButtonPulse{
+  0%,62%,100%{opacity:0;transform:scale(.86)}
+  68%{opacity:.8;transform:scale(1)}
+  78%{opacity:0;transform:scale(1.12)}
+}
+@keyframes menuDotPulse{
+  0%,62%,100%{opacity:.35;transform:scale(.8)}
+  68%{opacity:.75;transform:scale(1)}
+  78%{opacity:0;transform:scale(1.35)}
+}
+@keyframes menuHeadIn{to{opacity:1;transform:translateY(0)}}
+@keyframes menuIntroIn{to{opacity:1;transform:translateY(0)}}
+@keyframes menuActionIn{to{opacity:1;transform:translateY(0)}}
+@keyframes menuDividerIn{to{opacity:1;transform:translateY(0)}}
+@keyframes menuFooterIn{to{opacity:1;transform:translateY(0)}}
+
+@media(prefers-reduced-motion:reduce){
+  .menu::before,.menu::after{animation:none !important}
+  .mobile-menu.open .mobile-menu-head,
+  .mobile-menu.open .mobile-menu-intro,
+  .mobile-menu.open .menu-actions .menu-card,
+  .mobile-menu.open .menu-divider,
+  .mobile-menu.open > .menu-admin,
+  .mobile-menu.open .mobile-menu-footer{
+    animation:none !important;
+    opacity:1 !important;
+    transform:none !important;
+  }
+}
+
+/* DONACIONES — MOBILE: alias limpio, continuo y simétrico */
+@media(max-width:520px){
+  .alias-copy-card{
+    display:grid;
+    grid-template-columns:46px minmax(0,1fr);
+    grid-template-areas:
+      "icon info"
+      "copy copy";
+    align-items:start;
+    column-gap:12px;
+    row-gap:8px;
+    min-height:0;
+    padding:15px 14px 13px;
+    text-align:left;
+  }
+
+  .alias-icon{
+    grid-area:icon;
+    width:46px;
+    height:46px;
+    flex:0 0 46px;
+    align-self:start;
+    margin-top:1px;
+  }
+
+  .alias-info{
+    grid-area:info;
+    min-width:0;
+    width:100%;
+  }
+
+  .alias-info small:first-child{
+    display:block;
+    white-space:nowrap;
+    font-size:12px;
+    line-height:1.3;
+    margin:0 0 4px;
+  }
+
+  .alias-info strong{
+    display:block;
+    margin:0;
+    font-size:15px;
+    line-height:1.25;
+    white-space:nowrap;
+  }
+
+  .alias-info strong b{
+    font-size:20px;
+    line-height:1.1;
+    letter-spacing:.4px;
+  }
+
+  .alias-holder{
+    display:block!important;
+    margin-top:5px!important;
+    font-size:11.5px!important;
+    line-height:1.3!important;
+    white-space:nowrap;
+  }
+
+  .alias-holder b{
+    font-size:11.5px!important;
+    font-weight:800;
+  }
+
+  .copy-label{
+    grid-area:copy;
+    justify-self:center;
+    margin:0;
+    padding:8px 16px;
+    font-size:10px;
+    line-height:1;
+    white-space:nowrap;
+    border-radius:10px;
+  }
+}
+
+@media(max-width:380px){
+  .alias-copy-card{
+    grid-template-columns:42px minmax(0,1fr);
+    column-gap:10px;
+    padding:13px 11px 12px;
+  }
+
+  .alias-icon{
+    width:42px;
+    height:42px;
+    flex-basis:42px;
+  }
+
+  .alias-info small:first-child{
+    font-size:11px;
+  }
+
+  .alias-info strong{
+    font-size:14px;
+  }
+
+  .alias-info strong b{
+    font-size:18px;
+  }
+
+  .alias-holder,
+  .alias-holder b{
+    font-size:10.5px!important;
+  }
+}
+
+/* V13 — Alias de donación: compacto, simétrico y destacado en móvil */
+@media (max-width: 520px){
+  .alias-copy-card{
+    display:grid;
+    grid-template-columns:42px minmax(0,1fr) auto;
+    grid-template-areas:"icon info copy";
+    align-items:center;
+    column-gap:9px;
+    row-gap:0;
+    padding:10px 10px;
+    min-height:68px;
+    border-radius:15px;
+  }
+
+  .alias-icon{
+    grid-area:icon;
+    width:42px;
+    height:42px;
+    padding:3px;
+    margin:0;
+    border-radius:11px;
+  }
+
+  .alias-info{
+    grid-area:info;
+    min-width:0;
+    width:auto;
+    justify-content:center;
+  }
+
+  .alias-info small:first-child{
+    display:block;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    font-size:10.5px;
+    line-height:1.15;
+    margin:0 0 2px;
+  }
+
+  .alias-info strong{
+    display:block;
+    white-space:nowrap;
+    font-size:11.5px;
+    line-height:1.15;
+    margin:0;
+  }
+
+  .alias-info strong b{
+    display:inline-block;
+    font-size:16px;
+    line-height:1.1;
+    letter-spacing:.35px;
+    color:#c98500;
+    background:rgba(247,169,33,.16);
+    padding:1px 6px 2px;
+    border-radius:7px;
+  }
+
+  .alias-holder{
+    display:block!important;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    margin:3px 0 0!important;
+    font-size:9.5px!important;
+    line-height:1.1!important;
+  }
+
+  .alias-holder b{
+    font-size:9.5px!important;
+    font-weight:800;
+  }
+
+  .copy-label{
+    grid-area:copy;
+    justify-self:end;
+    align-self:center;
+    margin:0;
+    padding:8px 10px;
+    min-width:82px;
+    text-align:center;
+    font-size:8.5px;
+    line-height:1;
+    white-space:nowrap;
+    border-radius:9px;
+  }
+}
+
+@media (max-width:360px){
+  .alias-copy-card{
+    grid-template-columns:38px minmax(0,1fr) auto;
+    column-gap:7px;
+    padding:9px 8px;
+  }
+  .alias-icon{width:38px;height:38px;flex-basis:38px}
+  .alias-info small:first-child{font-size:9.5px}
+  .alias-info strong{font-size:10.5px}
+  .alias-info strong b{font-size:14px;padding:1px 5px 2px}
+  .alias-holder,.alias-holder b{font-size:8.5px!important}
+  .copy-label{min-width:76px;padding:7px 7px;font-size:8px}
+}
+
+/* =========================================================
+   V15 — BOTÓN DEL MENÚ + APERTURA FLUIDA
+   El nuevo PNG se mantiene sutil, pero genera curiosidad.
+========================================================= */
+@media (max-width:850px){
+  .menu{
+    position:relative;
+    isolation:isolate;
+    overflow:visible !important;
+    background:rgba(255,255,255,.78) !important;
+    border:1px solid rgba(87,54,35,.12) !important;
+    box-shadow:0 7px 20px rgba(87,54,35,.09);
+  }
+
+  /* Halo muy sutil que respira cada tanto */
+  .menu::before{
+    content:"";
+    position:absolute;
+    inset:-6px;
+    border:1.5px solid rgba(247,169,33,.42);
+    border-radius:16px;
+    opacity:0;
+    transform:scale(.88);
+    pointer-events:none;
+    animation:menuCuriosityRing 4.2s cubic-bezier(.22,1,.36,1) infinite;
+  }
+
+  /* Pequeño punto de luz: llama la atención sin ser invasivo */
+  .menu::after{
+    content:"";
+    position:absolute;
+    width:6px;
+    height:6px;
+    right:3px;
+    top:3px;
+    border-radius:50%;
+    background:#F7A921;
+    opacity:.35;
+    pointer-events:none;
+    animation:menuCuriosityDot 4.2s ease-in-out infinite;
+  }
+
+  .menu img{
+    width:28px !important;
+    height:28px !important;
+    object-fit:contain;
+    display:block;
+    opacity:.92;
+    transform-origin:center;
+    filter:drop-shadow(0 3px 5px rgba(87,54,35,.10));
+    animation:menuIconBreath 3.8s ease-in-out infinite;
+  }
+
+  .menu:hover,.menu:focus-visible{
+    background:#fff !important;
+    box-shadow:0 11px 26px rgba(87,54,35,.14);
+    transform:translateY(-1px);
+    outline:none;
+  }
+
+  .menu:hover img,.menu:focus-visible img{
+    animation:none;
+    transform:scale(1.11) translateY(-1px);
+    filter:drop-shadow(0 5px 8px rgba(87,54,35,.16));
+  }
+
+  .menu:active img{
+    transform:scale(.94);
+  }
+
+  .menu[aria-expanded="true"]::before,
+  .menu[aria-expanded="true"]::after{
+    animation:none;
+    opacity:0;
+  }
+
+  .menu[aria-expanded="true"] img{
+    animation:menuIconOpen .48s cubic-bezier(.22,1,.36,1) forwards;
+  }
+
+  /* Drawer un poco más pausado y con sensación de profundidad */
+  .mobile-menu{
+    transition:
+      transform .64s cubic-bezier(.16,1,.3,1),
+      visibility 0s linear .64s !important;
+  }
+  .mobile-menu.open{
+    transition:
+      transform .64s cubic-bezier(.16,1,.3,1),
+      visibility 0s linear 0s !important;
+  }
+
+  /* Estados iniciales: no aparecen de golpe */
+  .mobile-menu.open .mobile-menu-head,
+  .mobile-menu.open .mobile-menu-intro,
+  .mobile-menu.open .menu-actions .menu-card,
+  .mobile-menu.open .menu-divider,
+  .mobile-menu.open > .menu-admin,
+  .mobile-menu.open .mobile-menu-footer{
+    animation-fill-mode:both !important;
+  }
+
+  .mobile-menu.open .mobile-menu-head{
+    animation:menuHeadSoftIn .62s cubic-bezier(.16,1,.3,1) .10s both !important;
+  }
+
+  .mobile-menu.open .mobile-menu-intro{
+    animation:menuIntroSoftIn .66s cubic-bezier(.16,1,.3,1) .22s both !important;
+  }
+
+  .mobile-menu.open .menu-actions .menu-card:nth-child(1){
+    animation:menuCardSoftIn .72s cubic-bezier(.16,1,.3,1) .38s both !important;
+  }
+  .mobile-menu.open .menu-actions .menu-card:nth-child(2){
+    animation:menuCardSoftIn .72s cubic-bezier(.16,1,.3,1) .51s both !important;
+  }
+  .mobile-menu.open .menu-actions .menu-card:nth-child(3){
+    animation:menuCardSoftIn .72s cubic-bezier(.16,1,.3,1) .64s both !important;
+  }
+
+  .mobile-menu.open .menu-divider{
+    animation:menuDividerSoftIn .58s cubic-bezier(.16,1,.3,1) .79s both !important;
+  }
+
+  .mobile-menu.open > .menu-admin{
+    animation:menuCardSoftIn .72s cubic-bezier(.16,1,.3,1) .88s both !important;
+  }
+
+  .mobile-menu.open .mobile-menu-footer{
+    animation:menuFooterSoftIn .58s cubic-bezier(.16,1,.3,1) 1.02s both !important;
+  }
+}
+
+@keyframes menuCuriosityRing{
+  0%,62%,100%{opacity:0;transform:scale(.88)}
+  68%{opacity:.72;transform:scale(1)}
+  78%{opacity:0;transform:scale(1.13)}
+}
+
+@keyframes menuCuriosityDot{
+  0%,62%,100%{opacity:.25;transform:scale(.8)}
+  68%{opacity:.78;transform:scale(1.15)}
+  78%{opacity:0;transform:scale(1.45)}
+}
+
+@keyframes menuIconBreath{
+  0%,100%{transform:translateY(0) scale(1) rotate(0deg)}
+  50%{transform:translateY(-1px) scale(1.045) rotate(-2deg)}
+}
+
+@keyframes menuIconOpen{
+  0%{transform:scale(1) rotate(0deg)}
+  55%{transform:scale(1.14) rotate(-5deg)}
+  100%{transform:scale(.96) rotate(0deg)}
+}
+
+@keyframes menuHeadSoftIn{
+  from{opacity:0;transform:translateY(-16px) scale(.985);filter:blur(3px)}
+  to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+}
+
+@keyframes menuIntroSoftIn{
+  from{opacity:0;transform:translateY(-12px) scale(.985);filter:blur(3px)}
+  to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+}
+
+@keyframes menuCardSoftIn{
+  from{opacity:0;transform:translateY(-18px) scale(.965);filter:blur(4px)}
+  to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+}
+
+@keyframes menuDividerSoftIn{
+  from{opacity:0;transform:translateY(-10px) scaleX(.88);filter:blur(2px)}
+  to{opacity:1;transform:translateY(0) scaleX(1);filter:blur(0)}
+}
+
+@keyframes menuFooterSoftIn{
+  from{opacity:0;transform:translateY(-8px);filter:blur(2px)}
+  to{opacity:1;transform:translateY(0);filter:blur(0)}
+}
+
+@media(max-width:430px){
+  .menu img{width:26px !important;height:26px !important}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .menu::before,.menu::after,.menu img{animation:none !important}
+  .mobile-menu.open .mobile-menu-head,
+  .mobile-menu.open .mobile-menu-intro,
+  .mobile-menu.open .menu-actions .menu-card,
+  .mobile-menu.open .menu-divider,
+  .mobile-menu.open > .menu-admin,
+  .mobile-menu.open .mobile-menu-footer{
+    animation:none !important;
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+  }
+}
+
+
+/* =========================================================
+   V16 — DONACIONES MOBILE: tarjeta de alias legible y equilibrada
+========================================================= */
+@media (max-width:520px){
+  .alias-copy-card{
+    display:grid !important;
+    grid-template-columns:42px minmax(0,1fr) 104px !important;
+    grid-template-areas:"icon info copy" !important;
+    align-items:center !important;
+    column-gap:8px !important;
+    row-gap:0 !important;
+    width:100% !important;
+    min-width:0 !important;
+    min-height:74px !important;
+    padding:10px 9px !important;
+    box-sizing:border-box !important;
+  }
+
+  .alias-icon{
+    grid-area:icon !important;
+    width:42px !important;
+    height:42px !important;
+    flex:0 0 42px !important;
+    margin:0 !important;
+    padding:3px !important;
+    box-sizing:border-box !important;
+  }
+
+  .alias-info{
+    grid-area:info !important;
+    min-width:0 !important;
+    width:100% !important;
+    overflow:hidden !important;
+  }
+
+  .alias-info small:first-child{
+    display:block !important;
+    margin:0 0 2px !important;
+    white-space:nowrap !important;
+    overflow:visible !important;
+    text-overflow:clip !important;
+    font-size:10px !important;
+    line-height:1.15 !important;
+  }
+
+  .alias-info strong{
+    display:block !important;
+    margin:0 !important;
+    white-space:nowrap !important;
+    font-size:11px !important;
+    line-height:1.15 !important;
+  }
+
+  .alias-info strong b{
+    display:inline-block !important;
+    font-size:17px !important;
+    line-height:1.05 !important;
+    letter-spacing:.25px !important;
+    padding:1px 6px 2px !important;
+    border-radius:7px !important;
+  }
+
+  .alias-holder{
+    display:block !important;
+    margin:3px 0 0 !important;
+    white-space:nowrap !important;
+    overflow:visible !important;
+    text-overflow:clip !important;
+    font-size:9.5px !important;
+    line-height:1.1 !important;
+  }
+
+  .alias-holder b{
+    font-size:9.5px !important;
+  }
+
+  .copy-label{
+    grid-area:copy !important;
+    justify-self:end !important;
+    align-self:center !important;
+    width:104px !important;
+    min-width:104px !important;
+    box-sizing:border-box !important;
+    margin:0 !important;
+    padding:9px 5px !important;
+    text-align:center !important;
+    font-size:8.5px !important;
+    line-height:1 !important;
+    white-space:nowrap !important;
+  }
+
+  /* Pago seguro más protagonista en móvil */
+  .secure-payment{
+    width:100% !important;
+    min-width:0 !important;
+    min-height:92px !important;
+    padding:10px !important;
+    box-sizing:border-box !important;
+    border-radius:16px !important;
+  }
+
+  .secure-payment-image{
+    width:100% !important;
+    max-width:none !important;
+    height:auto !important;
+    min-height:70px !important;
+    object-fit:contain !important;
+  }
+
+  /* Instagram: icono claramente visible sin deformar el botón */
+  .instagram-btn{
+    min-height:62px !important;
+    padding:10px 18px !important;
+    gap:12px !important;
+  }
+
+  .instagram-btn img{
+    width:48px !important;
+    height:48px !important;
+    flex:0 0 48px !important;
+    object-fit:contain !important;
+  }
+}
+
+@media (max-width:370px){
+  .alias-copy-card{
+    grid-template-columns:38px minmax(0,1fr) 96px !important;
+    column-gap:7px !important;
+    padding:9px 8px !important;
+  }
+  .alias-icon{width:38px !important;height:38px !important;flex-basis:38px !important}
+  .alias-info small:first-child{font-size:9.2px !important}
+  .alias-info strong{font-size:10.5px !important}
+  .alias-info strong b{font-size:15.5px !important;padding:1px 5px 2px !important}
+  .alias-holder,.alias-holder b{font-size:8.8px !important}
+  .copy-label{width:96px !important;min-width:96px !important;font-size:8px !important;padding:8px 4px !important}
+  .instagram-btn img{width:44px !important;height:44px !important;flex-basis:44px !important}
+}
+
+/* =========================================================
+   CÓMO FUNCIONA — V3 / recorrido vertical mobile-first
+   ========================================================= */
+.how-v3{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 8% 10%, rgba(247,169,33,.10), transparent 24%),
+    radial-gradient(circle at 94% 76%, rgba(203,81,40,.08), transparent 25%),
+    #fffaf1;
+}
+.how-v3 .section-head{max-width:760px;margin-left:auto;margin-right:auto;margin-bottom:34px}
+.how-v3 .section-head h2{margin-bottom:10px}
+.how-v3 .section-head p{max-width:520px}
+.adoption-steps{max-width:760px;margin:0 auto;display:grid;gap:22px;position:relative}
+.adoption-steps:before{
+  content:"";position:absolute;left:18px;top:36px;bottom:36px;width:2px;
+  background:repeating-linear-gradient(to bottom,var(--terracotta) 0 6px,transparent 6px 13px);
+  opacity:.28;
+}
+.adoption-step{
+  position:relative;display:grid;grid-template-columns:minmax(0,1fr) 145px;
+  align-items:center;gap:12px;min-height:238px;padding:25px 16px 25px 26px;
+  border-radius:34px 48px 34px 48px;overflow:hidden;isolation:isolate;
+  box-shadow:0 14px 34px rgba(87,54,35,.10);
+  border:1px solid rgba(87,54,35,.08);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.adoption-step:nth-child(even){border-radius:48px 34px 48px 34px;grid-template-columns:145px minmax(0,1fr);padding:25px 26px 25px 16px}
+.adoption-step:nth-child(even) .step-copy{grid-column:2;grid-row:1}
+.adoption-step:nth-child(even) .step-art{grid-column:1;grid-row:1}
+.adoption-step:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(87,54,35,.14)}
+.step-yellow{background:linear-gradient(135deg,#f7b52f 0%,#f8c55b 100%)}
+.step-orange{background:linear-gradient(135deg,#d65b35 0%,#c84e29 100%);color:#fff}
+.step-brown{background:linear-gradient(135deg,#63422e 0%,#4f3020 100%);color:#fff}
+.step-terracotta{background:linear-gradient(135deg,#cf5a32 0%,#b94727 100%);color:#fff}
+.step-copy{position:relative;z-index:2;padding-left:4px}
+.step-no{
+  display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;
+  background:rgba(255,248,236,.95);color:var(--brown);font-size:12px;font-weight:900;
+  letter-spacing:.3px;margin-bottom:9px;box-shadow:0 5px 12px rgba(87,54,35,.10)
+}
+.step-kicker{display:block;font-size:9px;line-height:1;letter-spacing:.14em;font-weight:900;opacity:.68;margin-bottom:3px}
+.adoption-step h3{
+  margin:0 0 7px;font-family:"Fraunces",Georgia,serif;font-size:clamp(34px,9vw,47px);
+  line-height:.98;letter-spacing:-1px;color:inherit
+}
+.adoption-step p{margin:0;max-width:390px;font-size:15px;line-height:1.48;color:inherit;opacity:.92}
+.step-art{height:185px;display:flex;align-items:center;justify-content:center;position:relative;z-index:2}
+.step-art:before{
+  content:"";position:absolute;width:138px;height:138px;border-radius:48% 52% 45% 55%;
+  background:rgba(255,248,236,.26);transform:rotate(-8deg);z-index:-1
+}
+.step-art img{width:100%;height:100%;display:block;object-fit:contain;filter:drop-shadow(0 12px 14px rgba(62,36,23,.14));border-radius:0;background:transparent}
+.step-orange .step-art img,.step-brown .step-art img,.step-terracotta .step-art img{mix-blend-mode:normal}
+.how-closing{
+  max-width:520px;margin:28px auto 0;text-align:center;padding:17px 20px;
+  border-radius:999px;background:#f3dfc7;border:1px solid #e4ccb1;color:var(--brown)
+}
+.how-closing span{font-size:24px;color:var(--terracotta);vertical-align:-2px;margin-right:7px}
+.how-closing strong{font-family:"Fraunces",Georgia,serif;font-size:19px}
+
+@media(max-width:520px){
+  .how-v3{padding-top:58px;padding-bottom:58px}
+  .how-v3 .section-head{margin-bottom:28px}
+  .how-v3 .section-head p{font-size:15px}
+  .adoption-steps{gap:17px;padding:0 1px}
+  .adoption-steps:before{left:17px;top:28px;bottom:28px}
+  .adoption-step,
+  .adoption-step:nth-child(even){
+    grid-template-columns:minmax(0,1fr) 132px;min-height:224px;gap:8px;
+    padding:22px 12px 22px 23px;border-radius:29px 39px 29px 39px
+  }
+  .adoption-step:nth-child(even) .step-copy{grid-column:2;grid-row:1}
+  .adoption-step:nth-child(even) .step-art{grid-column:1;grid-row:1}
+  .step-art{height:164px}
+  .step-art:before{width:124px;height:124px}
+  .step-no{width:31px;height:31px;font-size:11px;margin-bottom:7px}
+  .step-kicker{font-size:8px}
+  .adoption-step h3{font-size:35px;margin-bottom:6px}
+  .step-orange h3{font-size:32px;white-space:nowrap;letter-spacing:-.8px;transform:translateX(-8px)}
+  .step-brown .step-art:before{display:none}
+  .adoption-step p{font-size:13px;line-height:1.43}
+  .how-closing{margin-top:24px;padding:14px 16px}
+  .how-closing strong{font-size:17px}
+}
+
+@media(min-width:521px){
+  .adoption-step{grid-template-columns:minmax(0,1fr) 210px;min-height:275px;padding:30px 26px 30px 34px}
+  .adoption-step:nth-child(even){grid-template-columns:210px minmax(0,1fr);padding:30px 34px 30px 26px}
+  .step-art{height:220px}
+  .step-art:before{width:176px;height:176px}
+  .adoption-step h3{font-size:48px}
+  .adoption-step p{font-size:16px}
+}
+
+
+/* Ajustes finales de alineación móvil */
+@media (max-width: 699px){
+  /* Paso 2 — imagen apenas hacia la izquierda */
+  .step-orange .step-art img{
+    transform: translateX(-6px);
+  }
+
+  /* Paso 4 — imagen y texto apenas hacia la izquierda */
+  .step-green .step-art img{
+    transform: translateX(-6px);
+  }
+
+  .step-green .step-copy{
+    transform: translateX(-6px);
+  }
+}
+
+/* Ajuste final Postulate — imagen y texto */
+
+@media (max-width: 699px){
+  .step-orange .step-art img{
+    transform: translateX(-12px);
+  }
+  .step-orange .step-copy{
+    transform: translateX(-6px);
+  }
+}
+
+/* Encabezado "Adoptar es un compromiso" — centrado y más legible */
+.commitment-intro{
+  text-align:center;
+}
+.commitment-intro h2{
+  text-align:center;
+  font-weight:800;
+  letter-spacing:-0.3px;
+  line-height:1.08;
+  max-width:100%;
+  margin-left:auto;
+  margin-right:auto;
+}
+.commitment-intro p{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:760px;
+}
+@media (max-width:699px){
+  .commitment-intro h2{
+    font-size:clamp(30px,8.5vw,38px);
+  }
+  .commitment-intro p{
+    max-width:340px;
+  }
+}
+
+
+/* Adoptás — ajuste final de posición en móvil */
+@media (max-width:699px){
+  .step-green .step-art img{
+    transform: translateX(-40px);
+  }
+
+  .step-green .step-copy{
+    transform: translateX(-20px);
+  }
+}
+
+/* =========================================================
+   DONACIONES — MOBILE FINAL
+   Prioridad visual para celulares: alias + titular + copia
+   y banner de pago seguro grande y claramente visible.
+   ========================================================= */
+@media (max-width:520px){
+  .donation-bottom{
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+    padding-top:20px !important;
+  }
+
+  .alias-copy-card{
+    display:grid !important;
+    grid-template-columns:52px minmax(0,1fr) !important;
+    grid-template-rows:auto auto !important;
+    grid-template-areas:
+      "icon info"
+      "icon copy" !important;
+    column-gap:12px !important;
+    row-gap:9px !important;
+    width:100% !important;
+    min-height:142px !important;
+    padding:16px 14px !important;
+    box-sizing:border-box !important;
+    align-items:center !important;
+    border-radius:19px !important;
+  }
+
+  .alias-icon{
+    grid-area:icon !important;
+    width:52px !important;
+    height:52px !important;
+    flex-basis:52px !important;
+    align-self:center !important;
+    border-radius:14px !important;
+  }
+
+  .alias-info{
+    grid-area:info !important;
+    width:100% !important;
+    min-width:0 !important;
+    overflow:visible !important;
+  }
+
+  .alias-info small:first-child{
+    font-size:12px !important;
+    line-height:1.2 !important;
+    margin:0 0 4px !important;
+    white-space:normal !important;
+  }
+
+  .alias-info strong{
+    font-size:15px !important;
+    line-height:1.2 !important;
+    white-space:nowrap !important;
+    margin:0 !important;
+  }
+
+  .alias-info strong b{
+    font-size:19px !important;
+    line-height:1.1 !important;
+    letter-spacing:.25px !important;
+    padding:1px 5px 2px !important;
+  }
+
+  .alias-holder{
+    display:block !important;
+    margin:6px 0 0 !important;
+    font-size:12.5px !important;
+    line-height:1.25 !important;
+    white-space:normal !important;
+    overflow:visible !important;
+  }
+
+  .alias-holder b{
+    font-size:13px !important;
+    font-weight:800 !important;
+  }
+
+  .copy-label{
+    grid-area:copy !important;
+    justify-self:start !important;
+    width:auto !important;
+    min-width:0 !important;
+    margin:0 !important;
+    padding:10px 15px !important;
+    border-radius:11px !important;
+    font-size:10px !important;
+    line-height:1 !important;
+    white-space:nowrap !important;
+  }
+
+  .secure-payment{
+    width:100% !important;
+    min-width:0 !important;
+    min-height:112px !important;
+    padding:10px !important;
+    box-sizing:border-box !important;
+    border-radius:19px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+
+  .secure-payment-image{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    object-fit:contain !important;
+    border-radius:10px !important;
+  }
+}
+
+@media (max-width:380px){
+  .alias-copy-card{
+    grid-template-columns:46px minmax(0,1fr) !important;
+    column-gap:10px !important;
+    min-height:138px !important;
+    padding:14px 12px !important;
+  }
+
+  .alias-icon{
+    width:46px !important;
+    height:46px !important;
+    flex-basis:46px !important;
+  }
+
+  .alias-info strong{
+    font-size:14px !important;
+  }
+
+  .alias-info strong b{
+    font-size:17px !important;
+  }
+
+  .alias-holder{
+    font-size:12px !important;
+  }
+
+  .alias-holder b{
+    font-size:12.5px !important;
+  }
+
+  .copy-label{
+    font-size:9.5px !important;
+    padding:9px 13px !important;
+  }
+
+  .secure-payment{
+    min-height:100px !important;
+  }
+}
+
+/* DONACIONES — banner Mercado Pago más grande y sin recuadro exterior en móvil */
+@media (max-width:520px){
+  .secure-payment{
+    width:100% !important;
+    min-width:0 !important;
+    min-height:0 !important;
+    height:auto !important;
+    padding:0 !important;
+    background:transparent !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+  }
+
+  .secure-payment-image{
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+    height:auto !important;
+    margin:0 !important;
+    border-radius:0 !important;
+    object-fit:contain !important;
+  }
+}
+
+@media (max-width:380px){
+  .secure-payment{
+    min-height:0 !important;
+    padding:0 !important;
+  }
+
+  .secure-payment-image{
+    width:100% !important;
+    min-height:0 !important;
+  }
+}
+
+/* DONACIONES — cierre visual móvil */
+@media (max-width:520px){
+  .donation-bottom{
+    gap:24px !important;
+    padding-bottom:18px !important;
+  }
+
+  /* Banner Mercado Pago: integrado al lenguaje de bordes redondeados */
+  .secure-payment{
+    border-radius:22px !important;
+    overflow:hidden !important;
+    padding:0 !important;
+  }
+
+  .secure-payment-image{
+    display:block !important;
+    width:100% !important;
+    border-radius:22px !important;
+  }
+}
